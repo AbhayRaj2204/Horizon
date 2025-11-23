@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinations - Horizon Tours & Travels | Premium Travel Experiences</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/language-selector.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,14 +15,20 @@
                 <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                <li><a href="services.html">Services</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Added language selector -->
+                <li class="mobile-lang-selector">
+                    <div class="lang-selector">
+                        <button data-lang="en" class="active">EN</button>
+                        <button data-lang="ja">日本語</button>
+                    </div>
+                </li>
             </ul>
-            <button class="cta-btn">BOOK NOW</button>
+            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -37,9 +44,9 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-label">Discover Our Collection</p>
-            <h1 class="hero-title">Handpicked Destinations</h1>
-            <p class="hero-subtitle">Explore the world's most breathtaking locations curated exclusively for you</p>
+            <p class="hero-label" data-i18n="destinations.collection">Discover Our Collection</p>
+            <h1 class="hero-title" data-i18n="destinations.handpicked">Handpicked Destinations</h1>
+            <p class="hero-subtitle" data-i18n="destinations.exploreSubtitle">Explore the world's most breathtaking locations curated exclusively for you</p>
         </div>
     </section>
 
@@ -47,8 +54,8 @@
     <section class="destinations-detailed">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Featured Destinations</h2>
-                <p class="section-subtitle">Each destination is carefully selected for its unique charm and luxury offerings</p>
+                <h2 class="section-title" data-i18n="destinations.featured">Our Featured Destinations</h2>
+                <p class="section-subtitle" data-i18n="destinations.featuredSubtitle">Each destination is carefully selected for its unique charm and luxury offerings</p>
             </div>
 
             <div class="destination-list">
@@ -58,16 +65,16 @@
                         <img src="public/images/gallery-1.jpg" alt="Australia">
                     </div>
                     <div class="destination-item-content">
-                        <h3>Australia</h3>
-                        <p class="destination-rating">★★★★★ (4.9 / 5)</p>
-                        <p>Experience the raw beauty of Australia with luxury lodges, guided safaris, and authentic aboriginal experiences. From the stunning Great Barrier Reef to the iconic Outback, discover unforgettable adventures.</p>
+                        <h3 data-i18n="destinations.australia">Australia</h3>
+                        <p class="destination-rating" data-i18n="destinations.australiaRating">★★★★★ (4.9 / 5)</p>
+                        <p data-i18n="destinations.australiaDesc">Experience the raw beauty of Australia with luxury lodges, guided safaris, and authentic aboriginal experiences. From the stunning Great Barrier Reef to the iconic Outback, discover unforgettable adventures.</p>
                         <ul class="destination-features">
-                            <li>Premium desert lodges</li>
-                            <li>Expert local guides</li>
-                            <li>Sunset experiences</li>
-                            <li>Wildlife safaris</li>
+                            <li data-i18n="destinations.premiumDeserts">Premium desert lodges</li>
+                            <li data-i18n="destinations.expertGuides">Expert local guides</li>
+                            <li data-i18n="destinations.sunsetExp">Sunset experiences</li>
+                            <li data-i18n="destinations.wildlifeSafaris">Wildlife safaris</li>
                         </ul>
-                        <a href="australia.html" class="destination-btn">EXPLORE</a>
+                        <a href="australia.html" class="destination-btn" data-i18n="destinations.explore">EXPLORE</a>
                     </div>
                 </div>
 
@@ -77,16 +84,16 @@
                         <img src="public/images/gallery-3.jpg" alt="New Zealand">
                     </div>
                     <div class="destination-item-content">
-                        <h3>New Zealand</h3>
-                        <p class="destination-rating">★★★★★ (5.0 / 5)</p>
-                        <p>Explore the breathtaking landscapes of New Zealand with adventure activities, luxury lodges, and stunning natural wonders. From fiords and mountains to pristine beaches, experience nature's masterpiece.</p>
+                        <h3 data-i18n="destinations.newzealand">New Zealand</h3>
+                        <p class="destination-rating" data-i18n="destinations.newzealandRating">★★★★★ (5.0 / 5)</p>
+                        <p data-i18n="destinations.newzealandDesc">Explore the breathtaking landscapes of New Zealand with adventure activities, luxury lodges, and stunning natural wonders. From fiords and mountains to pristine beaches, experience nature's masterpiece.</p>
                         <ul class="destination-features">
-                            <li>Mountain lodges</li>
-                            <li>Adventure activities</li>
-                            <li>Scenic tours</li>
-                            <li>Luxury wellness resorts</li>
+                            <li data-i18n="destinations.mountainLodges">Mountain lodges</li>
+                            <li data-i18n="destinations.adventureActivities">Adventure activities</li>
+                            <li data-i18n="destinations.scenicTours">Scenic tours</li>
+                            <li data-i18n="destinations.luxuryWellness">Luxury wellness resorts</li>
                         </ul>
-                        <a href="newzealand.html" class="destination-btn">EXPLORE</a>
+                        <a href="newzealand.html" class="destination-btn" data-i18n="destinations.explore">EXPLORE</a>
                     </div>
                 </div>
             </div>
@@ -96,9 +103,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Visit These Amazing Destinations?</h2>
-            <p>Contact our travel experts to craft your perfect itinerary</p>
-            <button class="cta-primary-btn">START PLANNING</button>
+            <h2 data-i18n="destinations.ready">Ready to Visit These Amazing Destinations?</h2>
+            <p data-i18n="destinations.readySubtitle">Contact our travel experts to craft your perfect itinerary</p>
+            <button class="cta-primary-btn" data-i18n="destinations.startPlanning">START PLANNING</button>
         </div>
     </section>
 
@@ -108,41 +115,52 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3 class="footer-logo">
-                        <a href="/index.html"></a>
+                        <a href="/index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
                         </a>
                     </h3>
-                    <p>Premium travel experiences crafted with elegance and expertise.</p>
+                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.company">Company</h4>
                     <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="index.html#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                        <li><a href="contact.html" data-i18n="footer.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Email: hello@horizontours.com</p>
-                    <p>Phone: +1 (800) 456-7890</p>
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
+                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Added translation scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-selector button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setLanguage(e.target.getAttribute('data-lang'));
+                });
+            });
+        });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

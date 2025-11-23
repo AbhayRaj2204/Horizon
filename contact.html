@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Horizon Tours & Travels | Get in Touch</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/language-selector.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,14 +15,20 @@
                 <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                <li><a href="services.html">Services</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Added language selector -->
+                <li class="mobile-lang-selector">
+                    <div class="lang-selector">
+                        <button data-lang="en" class="active">EN</button>
+                        <button data-lang="ja">日本語</button>
+                    </div>
+                </li>
             </ul>
-            <button class="cta-btn">BOOK NOW</button>
+            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -37,9 +44,9 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-label">Get in Touch</p>
-            <h1 class="hero-title">Contact Our Team</h1>
-            <p class="hero-subtitle">Let's start planning your unforgettable adventure</p>
+            <p class="hero-label" data-i18n="contact.touch">Get in Touch</p>
+            <h1 class="hero-title" data-i18n="contact.contactTeam">Contact Our Team</h1>
+            <p class="hero-subtitle" data-i18n="contact.planning">Let's start planning your unforgettable adventure</p>
         </div>
     </section>
 
@@ -49,65 +56,65 @@
             <div class="contact-grid">
                 <!-- Contact Form -->
                 <div class="contact-form-section">
-                    <h2 class="contact-form-title">Send us a Message</h2>
+                    <h2 class="contact-form-title" data-i18n="contact.sendMessage">Send us a Message</h2>
                     <form class="contact-form">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" placeholder="Your Name" data-i18n-attr="placeholder" data-i18n="contact.name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" placeholder="Your Email" data-i18n-attr="placeholder" data-i18n="contact.email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number">
+                            <input type="tel" placeholder="Phone Number" data-i18n-attr="placeholder" data-i18n="contact.phone">
                         </div>
                         <div class="form-group">
                             <select required>
                                 <option value="">Select Tour Type</option>
-                                <option value="luxury">Luxury Tour</option>
-                                <option value="adventure">Adventure Tour</option>
-                                <option value="family">Family Trip</option>
-                                <option value="cultural">Cultural Tour</option>
-                                <option value="honeymoon">Honeymoon</option>
+                                <option value="luxury" data-i18n="contact.luxury">Luxury Tour</option>
+                                <option value="adventure" data-i18n="contact.adventureOpt">Adventure Tour</option>
+                                <option value="family" data-i18n="contact.familyTrip">Family Trip</option>
+                                <option value="cultural" data-i18n="contact.culturalOpt">Cultural Tour</option>
+                                <option value="honeymoon" data-i18n="contact.honeymoonOpt">Honeymoon</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Tell us about your dream trip..." rows="6"></textarea>
+                            <textarea placeholder="Tell us about your dream trip..." data-i18n-attr="placeholder" data-i18n="contact.dreamTrip" rows="6"></textarea>
                         </div>
-                        <button type="submit" class="form-submit-btn">SEND ENQUIRY</button>
+                        <button type="submit" class="form-submit-btn" data-i18n="contact.sendEnquiry">SEND ENQUIRY</button>
                     </form>
                 </div>
 
                 <!-- Contact Information -->
                 <div class="contact-info-section">
-                    <h2 class="contact-info-title">Contact Information</h2>
+                    <h2 class="contact-info-title" data-i18n="contact.information">Contact Information</h2>
                     
                     <div class="contact-info-card">
-                        <h3>Office Address</h3>
-                        <p>123 Travel Plaza<br>Sydney, NSW 2000<br>Australia</p>
+                        <h3 data-i18n="contact.address">Office Address</h3>
+                        <p data-i18n="contact.sydney">123 Travel Plaza<br>Sydney, NSW 2000<br>Australia</p>
                     </div>
 
                     <div class="contact-info-card">
-                        <h3>Phone</h3>
-                        <p>General: +1 (800) 456-7890<br>Mobile: +1 (800) 456-7891<br>Available 24/7</p>
+                        <h3 data-i18n="contact.phoneTitle">Phone</h3>
+                        <p data-i18n="contact.phoneDet">General: +1 (800) 456-7890<br>Mobile: +1 (800) 456-7891<br>Available 24/7</p>
                     </div>
 
                     <div class="contact-info-card">
-                        <h3>Email</h3>
-                        <p>General Inquiries:<br>hello@horizontours.com<br><br>Support:<br>support@horizontours.com</p>
+                        <h3 data-i18n="contact.emailTitle">Email</h3>
+                        <p data-i18n="contact.emailDet">General Inquiries:<br>hello@horizontours.com<br><br>Support:<br>support@horizontours.com</p>
                     </div>
 
                     <div class="contact-info-card">
-                        <h3>Office Hours</h3>
-                        <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed<br>(Available for emergencies)</p>
+                        <h3 data-i18n="contact.hoursTitle">Office Hours</h3>
+                        <p data-i18n="contact.hoursDet">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed<br>(Available for emergencies)</p>
                     </div>
 
                     <div class="contact-social">
-                        <h3>Follow Us</h3>
+                        <h3 data-i18n="contact.followUs">Follow Us</h3>
                         <div class="social-links">
-                            <a href="#" class="social-link">Facebook</a>
-                            <a href="#" class="social-link">Instagram</a>
-                            <a href="#" class="social-link">Twitter</a>
-                            <a href="#" class="social-link">LinkedIn</a>
+                            <a href="#" class="social-link" data-i18n="contact.facebook">Facebook</a>
+                            <a href="#" class="social-link" data-i18n="contact.instagram">Instagram</a>
+                            <a href="#" class="social-link" data-i18n="contact.twitter">Twitter</a>
+                            <a href="#" class="social-link" data-i18n="contact.linkedin">LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -119,34 +126,34 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-subtitle">Find answers to common travel questions</p>
+                <h2 class="section-title" data-i18n="contact.faq">Frequently Asked Questions</h2>
+                <p class="section-subtitle" data-i18n="contact.faqSubtitle">Find answers to common travel questions</p>
             </div>
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h4>How far in advance should I book?</h4>
-                    <p>We recommend booking 2-3 months in advance for peak seasons and 4-6 weeks for other times. However, we can arrange last-minute trips depending on availability.</p>
+                    <h4 data-i18n="contact.faqQ1">How far in advance should I book?</h4>
+                    <p data-i18n="contact.faqA1">We recommend booking 2-3 months in advance for peak seasons and 4-6 weeks for other times. However, we can arrange last-minute trips depending on availability.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>What's included in your packages?</h4>
-                    <p>Most packages include flights, accommodations, transfers, and guided tours. Specific inclusions vary by package. We'll provide a detailed breakdown with your quote.</p>
+                    <h4 data-i18n="contact.faqQ2">What's included in your packages?</h4>
+                    <p data-i18n="contact.faqA2">Most packages include flights, accommodations, transfers, and guided tours. Specific inclusions vary by package. We'll provide a detailed breakdown with your quote.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Do you offer travel insurance?</h4>
-                    <p>Yes, comprehensive travel insurance is available and highly recommended. It covers trip cancellations, medical emergencies, and lost luggage.</p>
+                    <h4 data-i18n="contact.faqQ3">Do you offer travel insurance?</h4>
+                    <p data-i18n="contact.faqA3">Yes, comprehensive travel insurance is available and highly recommended. It covers trip cancellations, medical emergencies, and lost luggage.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Can I customize my itinerary?</h4>
-                    <p>All our packages are customizable. Share your preferences, and our experts will create a personalized itinerary just for you.</p>
+                    <h4 data-i18n="contact.faqQ4">Can I customize my itinerary?</h4>
+                    <p data-i18n="contact.faqA4">All our packages are customizable. Share your preferences, and our experts will create a personalized itinerary just for you.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>What if plans need to change?</h4>
-                    <p>We provide 24/7 support to modify your plans. Changes may incur additional costs depending on availability and timing.</p>
+                    <h4 data-i18n="contact.faqQ5">What if plans need to change?</h4>
+                    <p data-i18n="contact.faqA5">We provide 24/7 support to modify your plans. Changes may incur additional costs depending on availability and timing.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Are deposits refundable?</h4>
-                    <p>Our refund policy varies by package and booking date. Generally, deposits are non-refundable but can be transferred to another date within 12 months.</p>
+                    <h4 data-i18n="contact.faqQ6">Are deposits refundable?</h4>
+                    <p data-i18n="contact.faqA6">Our refund policy varies by package and booking date. Generally, deposits are non-refundable but can be transferred to another date within 12 months.</p>
                 </div>
             </div>
         </div>
@@ -155,9 +162,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Start Your Adventure?</h2>
-            <p>Our travel experts are ready to help you plan the perfect trip</p>
-            <button class="cta-primary-btn">SCHEDULE A CONSULTATION</button>
+            <h2 data-i18n="contact.readyAdventure">Ready to Start Your Adventure?</h2>
+            <p data-i18n="contact.readySubtitle">Our travel experts are ready to help you plan the perfect trip</p>
+            <button class="cta-primary-btn" data-i18n="contact.consultation">SCHEDULE A CONSULTATION</button>
         </div>
     </section>
 
@@ -167,41 +174,52 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3 class="footer-logo">
-                        <a href="/index.html"></a>
+                        <a href="/index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
                         </a>
                     </h3>
-                    <p>Premium travel experiences crafted with elegance and expertise.</p>
+                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.company">Company</h4>
                     <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="index.html#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                        <li><a href="contact.html" data-i18n="footer.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Email: hello@horizontours.com</p>
-                    <p>Phone: +1 (800) 456-7890</p>
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
+                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Added translation scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-selector button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setLanguage(e.target.getAttribute('data-lang'));
+                });
+            });
+        });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

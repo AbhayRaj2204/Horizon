@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - Horizon Tours & Travels | Premium Travel Solutions</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/language-selector.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,13 +15,20 @@
                 <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Added language selector -->
+                <li class="mobile-lang-selector">
+                    <div class="lang-selector">
+                        <button data-lang="en" class="active">EN</button>
+                        <button data-lang="ja">日本語</button>
+                    </div>
+                </li>
             </ul>
-            <button class="cta-btn">BOOK NOW</button>
+            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -36,9 +44,9 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-label">What We Offer</p>
-            <h1 class="hero-title">Premium Travel Services</h1>
-            <p class="hero-subtitle">Comprehensive solutions for every travel need</p>
+            <p class="hero-label" data-i18n="services.whatOffer">What We Offer</p>
+            <h1 class="hero-title" data-i18n="services.premiumServices">Premium Travel Services</h1>
+            <p class="hero-subtitle" data-i18n="services.comprehensive">Comprehensive solutions for every travel need</p>
         </div>
     </section>
 
@@ -46,80 +54,79 @@
     <section class="services-detail">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Comprehensive Services</h2>
-                <p class="section-subtitle">Everything you need for an unforgettable journey</p>
+                <h2 class="section-title" data-i18n="services.ourServices">Our Comprehensive Services</h2>
+                <p class="section-subtitle" data-i18n="services.everything">Everything you need for an unforgettable journey</p>
             </div>
 
             <div class="services-detail-grid">
                 <div class="service-detail-card">
                     <div class="service-detail-icon">✈</div>
-                    <h3>Flight Arrangements</h3>
-                    <p>First-class and business-class flights with premium airline partners worldwide</p>
+                    <h3 data-i18n="services.flights">Flight Arrangements</h3>
+                    <p data-i18n="services.flightsDesc">First-class and business-class flights with premium airline partners worldwide</p>
                     <ul class="service-list">
-                        <li>International flights</li>
-                        <li>Private charters available</li>
-                        <li>Exclusive lounge access</li>
-                        <li>Travel insurance included</li>
+                        <li data-i18n="services.international">International flights</li>
+                        <li data-i18n="services.privateCharters">Private charters available</li>
+                        <li data-i18n="services.loungeAccess">Exclusive lounge access</li>
+                        <li data-i18n="services.travelInsurance">Travel insurance included</li>
                     </ul>
                 </div>
 
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🏨</div>
-                    <h3>Luxury Accommodations</h3>
-                    <p>5-star hotels, resorts, and exclusive villas handpicked worldwide</p>
+                    <h3 data-i18n="services.accommodations">Luxury Accommodations</h3>
+                    <p data-i18n="services.accommodationsDesc">5-star hotels, resorts, and exclusive villas handpicked worldwide</p>
                     <ul class="service-list">
-                        <li>5-star hotel network</li>
-                        <li>Exclusive villa access</li>
-                        <li>Private island resorts</li>
-                        <li>Complimentary upgrades</li>
+                        <li data-i18n="services.hotelNetwork">5-star hotel network</li>
+                        <li data-i18n="services.exclusiveVilla">Exclusive villa access</li>
+                        <li data-i18n="services.islandResorts">Private island resorts</li>
+                        <li data-i18n="services.complimentary">Complimentary upgrades</li>
                     </ul>
                 </div>
 
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🗺</div>
-                    <h3>Custom Itineraries</h3>
-                    <p>Personalized travel plans designed exclusively for your preferences</p>
+                    <h3 data-i18n="services.itineraries">Custom Itineraries</h3>
+                    <p data-i18n="services.itinerariesDesc">Personalized travel plans designed exclusively for your preferences</p>
                     <ul class="service-list">
-                        <li>Bespoke planning</li>
-                        <li>Flexible schedules</li>
-                        <li>Local expert guides</li>
-                        <li>24/7 modifications</li>
+                        <li data-i18n="services.bespoke">Bespoke planning</li>
+                        <li data-i18n="services.flexible">Flexible schedules</li>
+                        <li data-i18n="services.modifications">24/7 modifications</li>
                     </ul>
                 </div>
 
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🍽</div>
-                    <h3>Dining Experiences</h3>
-                    <p>Michelin-starred restaurants and exclusive culinary experiences</p>
+                    <h3 data-i18n="services.dining">Dining Experiences</h3>
+                    <p data-i18n="services.diningDesc">Michelin-starred restaurants and exclusive culinary experiences</p>
                     <ul class="service-list">
-                        <li>Chef's table reservations</li>
-                        <li>Wine pairings</li>
-                        <li>Cooking classes</li>
-                        <li>Private dining setups</li>
+                        <li data-i18n="services.chefTable">Chef's table reservations</li>
+                        <li data-i18n="services.winePairings">Wine pairings</li>
+                        <li data-i18n="services.cookingClasses">Cooking classes</li>
+                        <li data-i18n="services.privateDining">Private dining setups</li>
                     </ul>
                 </div>
 
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🎭</div>
-                    <h3>Cultural Tours</h3>
-                    <p>Immersive cultural experiences with expert local guides</p>
+                    <h3 data-i18n="services.cultural">Cultural Tours</h3>
+                    <p data-i18n="services.culturalDesc">Immersive cultural experiences with expert local guides</p>
                     <ul class="service-list">
-                        <li>Private tours</li>
-                        <li>Museum access</li>
-                        <li>Cultural workshops</li>
-                        <li>VIP event access</li>
+                        <li data-i18n="services.privateTours">Private tours</li>
+                        <li data-i18n="services.museumAccess">Museum access</li>
+                        <li data-i18n="services.culturalWorkshops">Cultural workshops</li>
+                        <li data-i18n="services.vipEvents">VIP event access</li>
                     </ul>
                 </div>
 
                 <div class="service-detail-card">
                     <div class="service-detail-icon">📞</div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock assistance and emergency support</p>
+                    <h3 data-i18n="services.support24">24/7 Support</h3>
+                    <p data-i18n="services.support24Desc">Round-the-clock assistance and emergency support</p>
                     <ul class="service-list">
-                        <li>24/7 hotline</li>
-                        <li>Emergency assistance</li>
-                        <li>Travel coordination</li>
-                        <li>Priority support</li>
+                        <li data-i18n="services.hotline">24/7 hotline</li>
+                        <li data-i18n="services.emergency">Emergency assistance</li>
+                        <li data-i18n="services.coordination">Travel coordination</li>
+                        <li data-i18n="services.priority">Priority support</li>
                     </ul>
                 </div>
             </div>
@@ -130,26 +137,26 @@
     <section class="why-choose">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose Horizon?</h2>
-                <p class="section-subtitle">Decades of expertise in crafting unforgettable journeys</p>
+                <h2 class="section-title" data-i18n="services.whyChoose">Why Choose Horizon?</h2>
+                <p class="section-subtitle" data-i18n="services.decades">Decades of expertise in crafting unforgettable journeys</p>
             </div>
 
             <div class="why-choose-grid">
                 <div class="why-card">
-                    <h4>Expert Local Knowledge</h4>
-                    <p>Our guides have decades of experience and deep connections with local communities</p>
+                    <h4 data-i18n="services.expertKnowledge">Expert Local Knowledge</h4>
+                    <p data-i18n="services.expertText">Our guides have decades of experience and deep connections with local communities</p>
                 </div>
                 <div class="why-card">
-                    <h4>Luxury Network</h4>
-                    <p>Exclusive partnerships with the world's finest hotels, resorts, and restaurants</p>
+                    <h4 data-i18n="services.luxuryNetwork">Luxury Network</h4>
+                    <p data-i18n="services.luxuryText">Exclusive partnerships with the world's finest hotels, resorts, and restaurants</p>
                 </div>
                 <div class="why-card">
-                    <h4>Personalized Service</h4>
-                    <p>Every detail is customized to your preferences and requirements</p>
+                    <h4 data-i18n="services.personalizedService">Personalized Service</h4>
+                    <p data-i18n="services.personalizedText">Every detail is customized to your preferences and requirements</p>
                 </div>
                 <div class="why-card">
-                    <h4>Reliability</h4>
-                    <p>15+ years of satisfied clients and perfect travel execution record</p>
+                    <h4 data-i18n="services.reliability">Reliability</h4>
+                    <p data-i18n="services.reliabilityText">15+ years of satisfied clients and perfect travel execution record</p>
                 </div>
             </div>
         </div>
@@ -158,9 +165,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Explore Our Complete Service Range</h2>
-            <p>Contact our travel consultants for a personalized service package</p>
-            <button class="cta-primary-btn">GET CONSULTATION</button>
+            <h2 data-i18n="services.exploreServices">Explore Our Complete Service Range</h2>
+            <p data-i18n="services.contactConsultants">Contact our travel consultants for a personalized service package</p>
+            <button class="cta-primary-btn" data-i18n="services.consultation">GET CONSULTATION</button>
         </div>
     </section>
 
@@ -170,41 +177,52 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3 class="footer-logo">
-                        <a href="/index.html"></a>
+                        <a href="/index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
                         </a>
                     </h3>
-                    <p>Premium travel experiences crafted with elegance and expertise.</p>
+                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.company">Company</h4>
                     <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="index.html#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                        <li><a href="contact.html" data-i18n="footer.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Email: hello@horizontours.com</p>
-                    <p>Phone: +1 (800) 456-7890</p>
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
+                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Added translation scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-selector button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setLanguage(e.target.getAttribute('data-lang'));
+                });
+            });
+        });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

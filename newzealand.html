@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Zealand - Horizon Tours & Travels | Premium Travel Experiences</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/language-selector.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,14 +15,20 @@
                 <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                <li><a href="services.html">Services</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Added language selector -->
+                <li class="mobile-lang-selector">
+                    <div class="lang-selector">
+                        <button data-lang="en" class="active">EN</button>
+                        <button data-lang="ja">日本語</button>
+                    </div>
+                </li>
             </ul>
-            <button class="cta-btn">BOOK NOW</button>
+            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -37,9 +44,9 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-label">Discover Middle Earth</p>
-            <h1 class="hero-title">New Zealand</h1>
-            <p class="hero-subtitle">Experience breathtaking landscapes and luxury adventures in paradise</p>
+            <p class="hero-label" data-i18n="newzealand.discover">Discover Middle Earth</p>
+            <h1 class="hero-title" data-i18n="newzealand.title">New Zealand</h1>
+            <p class="hero-subtitle" data-i18n="newzealand.subtitle">Experience breathtaking landscapes and luxury adventures in paradise</p>
         </div>
     </section>
 
@@ -47,26 +54,26 @@
     <section class="why-choose">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Why Choose New Zealand?</h2>
-                <p class="section-subtitle">An adventure at the edge of paradise</p>
+                <h2 class="section-title" data-i18n="newzealand.why">Why Choose New Zealand?</h2>
+                <p class="section-subtitle" data-i18n="newzealand.whySubtitle">An adventure at the edge of paradise</p>
             </div>
 
             <div class="why-choose-grid">
                 <div class="why-card">
-                    <h4>Stunning Scenery</h4>
-                    <p>Dramatic fjords, snow-capped mountains, pristine lakes, and enchanting forests create some of the world's most spectacular landscapes.</p>
+                    <h4 data-i18n="newzealand.scenery">Stunning Scenery</h4>
+                    <p data-i18n="newzealand.sceneryDesc">Dramatic fjords, snow-capped mountains, pristine lakes, and enchanting forests create some of the world's most spectacular landscapes.</p>
                 </div>
                 <div class="why-card">
-                    <h4>Adventure Capital</h4>
-                    <p>From bungee jumping and skydiving to hiking and kayaking, New Zealand offers thrilling adventures for every adrenaline level.</p>
+                    <h4 data-i18n="newzealand.adventureCapital">Adventure Capital</h4>
+                    <p data-i18n="newzealand.adventureCapitalDesc">From bungee jumping and skydiving to hiking and kayaking, New Zealand offers thrilling adventures for every adrenaline level.</p>
                 </div>
                 <div class="why-card">
-                    <h4>Luxury Accommodations</h4>
-                    <p>Exclusive lodges with panoramic views, lakeside resorts, and boutique hotels offer unparalleled luxury and comfort.</p>
+                    <h4 data-i18n="newzealand.luxury">Luxury Accommodations</h4>
+                    <p data-i18n="newzealand.luxuryDesc">Exclusive lodges with panoramic views, lakeside resorts, and boutique hotels offer unparalleled luxury and comfort.</p>
                 </div>
                 <div class="why-card">
-                    <h4>Cultural Heritage</h4>
-                    <p>Explore Māori culture, Lord of the Rings filming locations, innovative cuisine, and warm Kiwi hospitality throughout your journey.</p>
+                    <h4 data-i18n="newzealand.cultural">Cultural Heritage</h4>
+                    <p data-i18n="newzealand.culturalDesc">Explore Māori culture, Lord of the Rings filming locations, innovative cuisine, and warm Kiwi hospitality throughout your journey.</p>
                 </div>
             </div>
         </div>
@@ -76,8 +83,8 @@
     <section class="destinations-detailed">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Must-Visit Highlights</h2>
-                <p class="section-subtitle">Discover New Zealand's most iconic and breathtaking destinations</p>
+                <h2 class="section-title" data-i18n="newzealand.highlights">Must-Visit Highlights</h2>
+                <p class="section-subtitle" data-i18n="newzealand.highlightsDesc">Discover New Zealand's most iconic and breathtaking destinations</p>
             </div>
 
             <!-- Milford Sound -->
@@ -86,18 +93,18 @@
                     <img src="public/images/Explore Milford Sound on a nature cruise from Queenstown_Te Anau.jpg" alt="Milford Sound">
                 </div>
                 <div class="destination-item-content">
-                    <h3>Milford Sound</h3>
-                    <p class="destination-rating">★★★★★ Eighth Wonder of the World</p>
-                    <p>Experience the most dramatic fjord landscape on Earth. Cruise through pristine waters surrounded by towering cliffs, cascading waterfalls, and rainforests. Milford Sound offers unforgettable views and world-class photography opportunities.</p>
+                    <h3 data-i18n="newzealand.milford">Milford Sound</h3>
+                    <p class="destination-rating" data-i18n="newzealand.milfordRating">★★★★★ Eighth Wonder of the World</p>
+                    <p data-i18n="newzealand.milfordDesc">Experience the most dramatic fjord landscape on Earth. Cruise through pristine waters surrounded by towering cliffs, cascading waterfalls, and rainforests. Milford Sound offers unforgettable views and world-class photography opportunities.</p>
                     <ul class="destination-features">
-                        <li>Luxury fjord cruises</li>
-                        <li>Private yacht experiences</li>
-                        <li>Scenic kayaking tours</li>
-                        <li>Waterfall photography</li>
-                        <li>Wildlife spotting (seals, dolphins)</li>
-                        <li>Multi-day hiking adventures</li>
+                        <li data-i18n="newzealand.milfordFeat1">Luxury fjord cruises</li>
+                        <li data-i18n="newzealand.milfordFeat2">Private yacht experiences</li>
+                        <li data-i18n="newzealand.milfordFeat3">Scenic kayaking tours</li>
+                        <li data-i18n="newzealand.milfordFeat4">Waterfall photography</li>
+                        <li data-i18n="newzealand.milfordFeat5">Wildlife spotting (seals, dolphins)</li>
+                        <li data-i18n="newzealand.milfordFeat6">Multi-day hiking adventures</li>
                     </ul>
-                    <button class="destination-btn">EXPLORE & BOOK</button>
+                    <button class="destination-btn" data-i18n="destinations.explore">EXPLORE & BOOK</button>
                 </div>
             </div>
 
@@ -107,18 +114,18 @@
                     <img src="public/images/images (1).jpg" alt="Rotorua">
                 </div>
                 <div class="destination-item-content">
-                    <h3>Rotorua Geothermal Wonders</h3>
-                    <p class="destination-rating">★★★★★ Geothermal Paradise</p>
-                    <p>Discover Earth's natural wonders at this geothermal hotspot. Explore bubbling mud pools, erupting geysers, and natural hot springs. Combine adventure with relaxation at luxury geothermal spas and exclusive Māori cultural experiences.</p>
+                    <h3 data-i18n="newzealand.rotorua">Rotorua Geothermal Wonders</h3>
+                    <p class="destination-rating" data-i18n="newzealand.rotoruaRating">★★★★★ Geothermal Paradise</p>
+                    <p data-i18n="newzealand.rotoruaDesc">Discover Earth's natural wonders at this geothermal hotspot. Explore bubbling mud pools, erupting geysers, and natural hot springs. Combine adventure with relaxation at luxury geothermal spas and exclusive Māori cultural experiences.</p>
                     <ul class="destination-features">
-                        <li>Geothermal hot pools & spas</li>
-                        <li>Māori cultural performances</li>
-                        <li>Guided geyser tours</li>
-                        <li>Forest canopy walks</li>
-                        <li>Adventure activities (ziplines, rafting)</li>
-                        <li>Luxury thermal resort stays</li>
+                        <li data-i18n="newzealand.rotoruaFeat1">Geothermal hot pools & spas</li>
+                        <li data-i18n="newzealand.rotoruaFeat2">Māori cultural performances</li>
+                        <li data-i18n="newzealand.rotoruaFeat3">Guided geyser tours</li>
+                        <li data-i18n="newzealand.rotoruaFeat4">Forest canopy walks</li>
+                        <li data-i18n="newzealand.rotoruaFeat5">Adventure activities (ziplines, rafting)</li>
+                        <li data-i18n="newzealand.rotoruaFeat6">Luxury thermal resort stays</li>
                     </ul>
-                    <button class="destination-btn">EXPLORE & BOOK</button>
+                    <button class="destination-btn" data-i18n="destinations.explore">EXPLORE & BOOK</button>
                 </div>
             </div>
 
@@ -128,18 +135,18 @@
                     <img src="public/images/images (2).jpg" alt="Bay of Islands">
                 </div>
                 <div class="destination-item-content">
-                    <h3>Bay of Islands</h3>
-                    <p class="destination-rating">★★★★★ Island Paradise</p>
-                    <p>Explore 144 picturesque islands with pristine beaches and crystal-clear waters. Enjoy private yacht cruises, island hopping, swimming with dolphins, and relaxation at luxury beachfront resorts in this tropical paradise.</p>
+                    <h3 data-i18n="newzealand.bayIslands">Bay of Islands</h3>
+                    <p class="destination-rating" data-i18n="newzealand.bayIslandsRating">★★★★★ Island Paradise</p>
+                    <p data-i18n="newzealand.bayIslandsDesc">Explore 144 picturesque islands with pristine beaches and crystal-clear waters. Enjoy private yacht cruises, island hopping, swimming with dolphins, and relaxation at luxury beachfront resorts in this tropical paradise.</p>
                     <ul class="destination-features">
-                        <li>Luxury yacht cruises</li>
-                        <li>Dolphin swimming tours</li>
-                        <li>Island hopping adventures</li>
-                        <li>Premium beach resorts</li>
-                        <li>Water sports & fishing</li>
-                        <li>Scenic coastal drives</li>
+                        <li data-i18n="newzealand.bayIslandsFeat1">Luxury yacht cruises</li>
+                        <li data-i18n="newzealand.bayIslandsFeat2">Dolphin swimming tours</li>
+                        <li data-i18n="newzealand.bayIslandsFeat3">Island hopping adventures</li>
+                        <li data-i18n="newzealand.bayIslandsFeat4">Premium beach resorts</li>
+                        <li data-i18n="newzealand.bayIslandsFeat5">Water sports & fishing</li>
+                        <li data-i18n="newzealand.bayIslandsFeat6">Scenic coastal drives</li>
                     </ul>
-                    <button class="destination-btn">EXPLORE & BOOK</button>
+                    <button class="destination-btn" data-i18n="destinations.explore">EXPLORE & BOOK</button>
                 </div>
             </div>
 
@@ -149,18 +156,18 @@
                     <img src="public/images/soaring-through-the-skies-air-adventures-in-queenstown-1745434703.jpg" alt="Queenstown">
                 </div>
                 <div class="destination-item-content">
-                    <h3>Queenstown - Adventure Capital</h3>
-                    <p class="destination-rating">★★★★★ The World's Best Adventure Destination</p>
-                    <p>Experience thrilling adventures in stunning mountain scenery. From bungee jumping and skydiving to wine tastings and gourmet dining, Queenstown offers the perfect blend of adrenaline and luxury.</p>
+                    <h3 data-i18n="newzealand.queenstown">Queenstown - Adventure Capital</h3>
+                    <p class="destination-rating" data-i18n="newzealand.queenstownRating">★★★★★ The World's Best Adventure Destination</p>
+                    <p data-i18n="newzealand.queenstownDesc">Experience thrilling adventures in stunning mountain scenery. From bungee jumping and skydiving to wine tastings and gourmet dining, Queenstown offers the perfect blend of adrenaline and luxury.</p>
                     <ul class="destination-features">
-                        <li>Bungee jumping & skydiving</li>
-                        <li>Jet boating & rafting</li>
-                        <li>Luxury lodges & resorts</li>
-                        <li>Fine dining experiences</li>
-                        <li>Wine region tours</li>
-                        <li>Scenic helicopter tours</li>
+                        <li data-i18n="newzealand.queenstownFeat1">Bungee jumping & skydiving</li>
+                        <li data-i18n="newzealand.queenstownFeat2">Jet boating & rafting</li>
+                        <li data-i18n="newzealand.queenstownFeat3">Luxury lodges & resorts</li>
+                        <li data-i18n="newzealand.queenstownFeat4">Fine dining experiences</li>
+                        <li data-i18n="newzealand.queenstownFeat5">Wine region tours</li>
+                        <li data-i18n="newzealand.queenstownFeat6">Scenic helicopter tours</li>
                     </ul>
-                    <button class="destination-btn">EXPLORE & BOOK</button>
+                    <button class="destination-btn" data-i18n="destinations.explore">EXPLORE & BOOK</button>
                 </div>
             </div>
         </div>
@@ -170,40 +177,40 @@
     <section class="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Curated Experiences</h2>
-                <p class="section-subtitle">Choose from our premium selection of activities</p>
+                <h2 class="section-title" data-i18n="newzealand.experiences">Curated Experiences</h2>
+                <p class="section-subtitle" data-i18n="newzealand.experiencesDesc">Choose from our premium selection of activities</p>
             </div>
 
             <div class="services-detail-grid">
                 <div class="service-detail-card">
                     <div class="service-detail-icon">⛰️</div>
-                    <h3>Adventure Sports</h3>
-                    <p>Professional guides for bungee jumping, skydiving, paragliding, and other thrilling activities in world-class locations.</p>
+                    <h3 data-i18n="newzealand.adventureSports">Adventure Sports</h3>
+                    <p data-i18n="newzealand.adventureSportsDesc">Professional guides for bungee jumping, skydiving, paragliding, and other thrilling activities in world-class locations.</p>
                 </div>
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🥾</div>
-                    <h3>Hiking & Trekking</h3>
-                    <p>Guided multi-day hikes along scenic trails with luxury lodge accommodations. Experience Fiordland's most spectacular walks.</p>
+                    <h3 data-i18n="newzealand.hiking">Hiking & Trekking</h3>
+                    <p data-i18n="newzealand.hikingDesc">Guided multi-day hikes along scenic trails with luxury lodge accommodations. Experience Fiordland's most spectacular walks.</p>
                 </div>
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🎬</div>
-                    <h3>Film Location Tours</h3>
-                    <p>Visit iconic Lord of the Rings and Hobbiton filming locations with expert guides. Relive cinematic moments in breathtaking landscapes.</p>
+                    <h3 data-i18n="newzealand.filmLocations">Film Location Tours</h3>
+                    <p data-i18n="newzealand.filmLocationsDesc">Visit iconic Lord of the Rings and Hobbiton filming locations with expert guides. Relive cinematic moments in breathtaking landscapes.</p>
                 </div>
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🍷</div>
-                    <h3>Wine & Cuisine</h3>
-                    <p>Premium wine tastings at renowned vineyards. Fine dining experiences featuring local ingredients and contemporary New Zealand cuisine.</p>
+                    <h3 data-i18n="newzealand.wine">Wine & Cuisine</h3>
+                    <p data-i18n="newzealand.wineDesc">Premium wine tastings at renowned vineyards. Fine dining experiences featuring local ingredients and contemporary New Zealand cuisine.</p>
                 </div>
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🚁</div>
-                    <h3>Scenic Flights</h3>
-                    <p>Private helicopter tours showcasing glaciers, mountains, and fjords from spectacular aerial perspectives.</p>
+                    <h3 data-i18n="newzealand.flights">Scenic Flights</h3>
+                    <p data-i18n="newzealand.flightsDesc">Private helicopter tours showcasing glaciers, mountains, and fjords from spectacular aerial perspectives.</p>
                 </div>
                 <div class="service-detail-card">
                     <div class="service-detail-icon">🧘</div>
-                    <h3>Wellness & Spa</h3>
-                    <p>Luxury spa treatments, yoga retreats, and wellness experiences in stunning natural settings with geothermal hot springs.</p>
+                    <h3 data-i18n="newzealand.wellness">Wellness & Spa</h3>
+                    <p data-i18n="newzealand.wellnessDesc">Luxury spa treatments, yoga retreats, and wellness experiences in stunning natural settings with geothermal hot springs.</p>
                 </div>
             </div>
         </div>
@@ -213,34 +220,34 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Travel Information</h2>
-                <p class="section-subtitle">Essential details for planning your New Zealand adventure</p>
+                <h2 class="section-title" data-i18n="newzealand.travelInfo">Travel Information</h2>
+                <p class="section-subtitle" data-i18n="newzealand.travelInfoDesc">Essential details for planning your New Zealand adventure</p>
             </div>
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h4>Visa & Entry Requirements</h4>
-                    <p>Most visitors require an eTA or visa. New Zealand offers a welcoming environment with straightforward entry requirements. Check with your embassy for specific details. Our team can assist with all documentation.</p>
+                    <h4 data-i18n="newzealand.visa">Visa & Entry Requirements</h4>
+                    <p data-i18n="newzealand.visaDesc">Most visitors require an eTA or visa. New Zealand offers a welcoming environment with straightforward entry requirements. Check with your embassy for specific details. Our team can assist with all documentation.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Best Time to Visit</h4>
-                    <p>Peak season is December-February (summer) and September-November (spring) with warm weather. Autumn (March-May) offers pleasant conditions and fewer crowds. Best duration: 10-14 days for a comprehensive experience.</p>
+                    <h4 data-i18n="newzealand.bestTime">Best Time to Visit</h4>
+                    <p data-i18n="newzealand.bestTimeDesc">Peak season is December-February (summer) and September-November (spring) with warm weather. Autumn (March-May) offers pleasant conditions and fewer crowds. Best duration: 10-14 days for a comprehensive experience.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Currency & Payments</h4>
-                    <p>The New Zealand Dollar (NZD) is the official currency. Credit cards widely accepted in cities and larger towns. ATMs readily available. Carry cash for remote areas. Good exchange rates throughout the country.</p>
+                    <h4 data-i18n="newzealand.currency">Currency & Payments</h4>
+                    <p data-i18n="newzealand.currencyDesc">The New Zealand Dollar (NZD) is the official currency. Credit cards widely accepted in cities and larger towns. ATMs readily available. Carry cash for remote areas. Good exchange rates throughout the country.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Language & Communication</h4>
-                    <p>English is the primary language with Māori widely spoken. Excellent mobile and internet connectivity nationwide. We arrange SIM cards and provide 24/7 connectivity services for all guests.</p>
+                    <h4 data-i18n="newzealand.language">Language & Communication</h4>
+                    <p data-i18n="newzealand.languageDesc">English is the primary language with Māori widely spoken. Excellent mobile and internet connectivity nationwide. We arrange SIM cards and provide 24/7 connectivity services for all guests.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Transportation</h4>
-                    <p>Well-developed transportation network with domestic flights, scenic drives, and premium car rentals. We arrange all transfers, flights, and luxury transportation throughout your journey.</p>
+                    <h4 data-i18n="newzealand.transport">Transportation</h4>
+                    <p data-i18n="newzealand.transportDesc">Well-developed transportation network with domestic flights, scenic drives, and premium car rentals. We arrange all transfers, flights, and luxury transportation throughout your journey.</p>
                 </div>
                 <div class="faq-item">
-                    <h4>Health & Safety</h4>
-                    <p>New Zealand is extremely safe with excellent healthcare facilities. Comprehensive travel insurance recommended. We provide 24/7 emergency support and medical assistance to all guests.</p>
+                    <h4 data-i18n="newzealand.health">Health & Safety</h4>
+                    <p data-i18n="newzealand.healthDesc">New Zealand is extremely safe with excellent healthcare facilities. Comprehensive travel insurance recommended. We provide 24/7 emergency support and medical assistance to all guests.</p>
                 </div>
             </div>
         </div>
@@ -249,9 +256,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Experience New Zealand?</h2>
-            <p>Our travel experts are here to craft your perfect New Zealand adventure</p>
-            <button class="cta-primary-btn">PLAN YOUR TRIP</button>
+            <h2 data-i18n="newzealand.ready">Ready to Experience New Zealand?</h2>
+            <p data-i18n="newzealand.readyDesc">Our travel experts are here to craft your perfect New Zealand adventure</p>
+            <button class="cta-primary-btn" data-i18n="newzealand.planTrip">PLAN YOUR TRIP</button>
         </div>
     </section>
 
@@ -261,41 +268,52 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3 class="footer-logo">
-                        <a href="/index.html"></a>
+                        <a href="/index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
                         </a>
                     </h3>
-                    <p>Premium travel experiences crafted with elegance and expertise.</p>
+                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.company">Company</h4>
                     <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="index.html#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                        <li><a href="contact.html" data-i18n="footer.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Email: hello@horizontours.com</p>
-                    <p>Phone: +1 (800) 456-7890</p>
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
+                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Added translation scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-selector button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setLanguage(e.target.getAttribute('data-lang'));
+                });
+            });
+        });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

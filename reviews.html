@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews - Horizon Tours & Travels | Client Testimonials</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/language-selector.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -14,14 +15,20 @@
                 <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
             </div>
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                <li><a href="services.html">Services</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Added language selector -->
+                <li class="mobile-lang-selector">
+                    <div class="lang-selector">
+                        <button data-lang="en" class="active">EN</button>
+                        <button data-lang="ja">日本語</button>
+                    </div>
+                </li>
             </ul>
-            <button class="cta-btn">BOOK NOW</button>
+            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -37,9 +44,9 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-label">Hear From Our Clients</p>
-            <h1 class="hero-title">Testimonials & Reviews</h1>
-            <p class="hero-subtitle">Real stories from travelers who experienced Horizon excellence</p>
+            <p class="hero-label" data-i18n="reviews.hear">Hear From Our Clients</p>
+            <h1 class="hero-title" data-i18n="reviews.testimonials">Testimonials & Reviews</h1>
+            <p class="hero-subtitle" data-i18n="reviews.realStories">Real stories from travelers who experienced Horizon excellence</p>
         </div>
     </section>
 
@@ -47,22 +54,22 @@
     <section class="reviews-full">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our Travelers' Stories</h2>
-                <p class="section-subtitle">Thousands of satisfied clients sharing their amazing experiences</p>
+                <h2 class="section-title" data-i18n="reviews.stories">Our Travelers' Stories</h2>
+                <p class="section-subtitle" data-i18n="reviews.storiesSubtitle">Thousands of satisfied clients sharing their amazing experiences</p>
             </div>
 
             <div class="reviews-full-grid">
                 <div class="review-full-card">
                     <div class="review-header">
                         <div class="review-stars">★★★★★</div>
-                        <span class="review-category">Honeymoon</span>
+                        <span class="review-category" data-i18n="reviews.honeymoon">Honeymoon</span>
                     </div>
-                    <h4>Perfect Honeymoon Experience</h4>
-                    <p>"Horizon created the most magical honeymoon imaginable. Every detail was flawlessly executed, from the beachfront villa with private pool to the sunset romantic dinner prepared by a private chef. We felt like royalty throughout our entire journey. Highly recommended!"</p>
+                    <h4 data-i18n="reviews.honeymoonTitle">Perfect Honeymoon Experience</h4>
+                    <p data-i18n="reviews.honeymoonFull">"Horizon created the most magical honeymoon imaginable. Every detail was flawlessly executed, from the beachfront villa with private pool to the sunset romantic dinner prepared by a private chef. We felt like royalty throughout our entire journey. Highly recommended!"</p>
                     <div class="review-person">
                         <div class="person-avatar">EM</div>
                         <div class="person-details">
-                            <p class="person-name">Emily Mitchell</p>
+                            <p class="person-name" data-i18n="reviews.emily">Emily Mitchell</p>
                             <p class="person-location">Maldives Honeymoon, 2024</p>
                         </div>
                     </div>
@@ -71,14 +78,14 @@
                 <div class="review-full-card">
                     <div class="review-header">
                         <div class="review-stars">★★★★★</div>
-                        <span class="review-category">Adventure</span>
+                        <span class="review-category" data-i18n="reviews.adventure">Adventure</span>
                     </div>
-                    <h4>Thrilling Adventure Beyond Expectations</h4>
-                    <p>"The adventure tour was absolutely incredible! Our guide had exceptional knowledge about the local wildlife, and the accommodations were surprisingly luxurious. Rock climbing, zip-lining, and hiking through pristine wilderness – everything was perfectly organized. Can't wait to book another trip!"</p>
+                    <h4 data-i18n="reviews.adventureTitle">Thrilling Adventure Beyond Expectations</h4>
+                    <p data-i18n="reviews.adventureFull">"The adventure tour was absolutely incredible! Our guide had exceptional knowledge about the local wildlife, and the accommodations were surprisingly luxurious. Rock climbing, zip-lining, and hiking through pristine wilderness – everything was perfectly organized. Can't wait to book another trip!"</p>
                     <div class="review-person">
                         <div class="person-avatar">JA</div>
                         <div class="person-details">
-                            <p class="person-name">James Anderson</p>
+                            <p class="person-name" data-i18n="reviews.james">James Anderson</p>
                             <p class="person-location">New Zealand Adventure, 2024</p>
                         </div>
                     </div>
@@ -87,14 +94,14 @@
                 <div class="review-full-card">
                     <div class="review-header">
                         <div class="review-stars">★★★★★</div>
-                        <span class="review-category">Family</span>
+                        <span class="review-category" data-i18n="reviews.family">Family</span>
                     </div>
-                    <h4>Family Vacation Made Easy</h4>
-                    <p>"Traveling with children can be stressful, but Horizon made everything seamless. They arranged kid-friendly activities, ensured the hotel had excellent facilities, and provided flexible schedules. My entire family had the time of their lives. Worth every penny!"</p>
+                    <h4 data-i18n="reviews.familyTitle">Family Vacation Made Easy</h4>
+                    <p data-i18n="reviews.familyFull">"Traveling with children can be stressful, but Horizon made everything seamless. They arranged kid-friendly activities, ensured the hotel had excellent facilities, and provided flexible schedules. My entire family had the time of their lives. Worth every penny!"</p>
                     <div class="review-person">
                         <div class="person-avatar">SH</div>
                         <div class="person-details">
-                            <p class="person-name">Sarah Harrison</p>
+                            <p class="person-name" data-i18n="reviews.sarah">Sarah Harrison</p>
                             <p class="person-location">Thailand Family Trip, 2024</p>
                         </div>
                     </div>
@@ -103,14 +110,14 @@
                 <div class="review-full-card">
                     <div class="review-header">
                         <div class="review-stars">★★★★★</div>
-                        <span class="review-category">Luxury</span>
+                        <span class="review-category" data-i18n="reviews.luxury">Luxury</span>
                     </div>
-                    <h4>Unmatched Luxury and Sophistication</h4>
-                    <p>"As frequent travelers, we've worked with many agencies, but Horizon stands out. Their luxury connections opened doors to exclusive experiences we couldn't have accessed ourselves. Private yacht cruises, VIP concert tickets, Michelin-starred dining – simply exceptional!"</p>
+                    <h4 data-i18n="reviews.luxuryTitle">Unmatched Luxury and Sophistication</h4>
+                    <p data-i18n="reviews.luxuryFull">"As frequent travelers, we've worked with many agencies, but Horizon stands out. Their luxury connections opened doors to exclusive experiences we couldn't have accessed ourselves. Private yacht cruises, VIP concert tickets, Michelin-starred dining – simply exceptional!"</p>
                     <div class="review-person">
                         <div class="person-avatar">MC</div>
                         <div class="person-details">
-                            <p class="person-name">Michael Chen</p>
+                            <p class="person-name" data-i18n="reviews.michael">Michael Chen</p>
                             <p class="person-location">European Tour, 2024</p>
                         </div>
                     </div>
@@ -119,15 +126,15 @@
                 <div class="review-full-card">
                     <div class="review-header">
                         <div class="review-stars">★★★★★</div>
-                        <span class="review-category">Cultural</span>
+                        <span class="review-category" data-i18n="reviews.cultural">Cultural</span>
                     </div>
-                    <h4>Authentic Cultural Immersion</h4>
-                    <p>"I wanted to experience authentic culture, not tourist traps. Horizon delivered! Their guides introduced us to local families, artisans, and hidden gems. We tasted real local cuisine, learned traditions firsthand, and made genuine connections. Transformative experience!"</p>
+                    <h4 data-i18n="reviews.culturalTitle">Authentic Cultural Immersion</h4>
+                    <p data-i18n="reviews.culturalFull">"I wanted to experience authentic culture, not tourist traps. Horizon delivered! Their guides introduced us to local families, artisans, and hidden gems. We tasted real local cuisine, learned traditions firsthand, and made genuine connections. Transformative experience!"</p>
                     <div class="review-person">
                         <div class="person-avatar">AL</div>
                         <div class="person-details">
-                            <p class="person-name">Amanda Lee</p>
-                            <p class="person-location">Vietnam Cultural Tour, 2024</p>
+                            <p class="person-name" data-i18n="reviews.amanda">Amanda Lee</p>
+                            <p class="person-location" data-i18n="reviews.amanda2024">Vietnam Cultural Tour, 2024</p>
                         </div>
                     </div>
                 </div>
@@ -135,15 +142,15 @@
                 <div class="review-full-card">
                     <div class="review-header">
                         <div class="review-stars">★★★★★</div>
-                        <span class="review-category">Business</span>
+                        <span class="review-category" data-i18n="reviews.business">Business</span>
                     </div>
-                    <h4>Corporate Travel Perfection</h4>
-                    <p>"Horizon handled all our corporate retreat arrangements flawlessly. Luxury accommodations, world-class venue setup, team-building activities, and seamless logistics. Our executives and team loved it, and the planning process was effortless. Fantastic partner!"</p>
+                    <h4 data-i18n="reviews.businessTitle">Corporate Travel Perfection</h4>
+                    <p data-i18n="reviews.businessFull">"Horizon handled all our corporate retreat arrangements flawlessly. Luxury accommodations, world-class venue setup, team-building activities, and seamless logistics. Our executives and team loved it, and the planning process was effortless. Fantastic partner!"</p>
                     <div class="review-person">
                         <div class="person-avatar">DR</div>
                         <div class="person-details">
-                            <p class="person-name">David Roberts</p>
-                            <p class="person-location">Corporate Retreat, Singapore 2024</p>
+                            <p class="person-name" data-i18n="reviews.david">David Roberts</p>
+                            <p class="person-location" data-i18n="reviews.david2024">Corporate Retreat, Singapore 2024</p>
                         </div>
                     </div>
                 </div>
@@ -152,19 +159,19 @@
             <div class="reviews-stats">
                 <div class="stat">
                     <h3>4.9 / 5.0</h3>
-                    <p>Average Rating</p>
+                    <p data-i18n="reviews.averageRating">Average Rating</p>
                 </div>
                 <div class="stat">
                     <h3>2500+</h3>
-                    <p>Happy Clients</p>
+                    <p data-i18n="reviews.happyClients">Happy Clients</p>
                 </div>
                 <div class="stat">
                     <h3>15+</h3>
-                    <p>Years Experience</p>
+                    <p data-i18n="reviews.yearsExperience">Years Experience</p>
                 </div>
                 <div class="stat">
                     <h3>50+</h3>
-                    <p>Destinations</p>
+                    <p data-i18n="reviews.destinations">Destinations</p>
                 </div>
             </div>
         </div>
@@ -173,9 +180,9 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Join Thousands of Satisfied Travelers</h2>
-            <p>Experience the Horizon difference – book your dream journey today</p>
-            <button class="cta-primary-btn">BOOK YOUR TRIP</button>
+            <h2 data-i18n="reviews.join">Join Thousands of Satisfied Travelers</h2>
+            <p data-i18n="reviews.joinSubtitle">Experience the Horizon difference – book your dream journey today</p>
+            <button class="cta-primary-btn" data-i18n="reviews.bookTrip">BOOK YOUR TRIP</button>
         </div>
     </section>
 
@@ -185,41 +192,52 @@
             <div class="footer-grid">
                <div class="footer-col">
                     <h3 class="footer-logo">
-                        <a href="/index.html"></a>
+                        <a href="/index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
                         </a>
                     </h3>
-                    <p>Premium travel experiences crafted with elegance and expertise.</p>
+                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="destinations.html">Destinations</a></li>
-                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h4 data-i18n="footer.company">Company</h4>
                     <ul>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="reviews.html">Reviews</a></li>
-                        <li><a href="contact.html">FAQ</a></li>
+                        <li><a href="index.html#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                        <li><a href="contact.html" data-i18n="footer.faq">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Contact</h4>
-                    <p>Email: hello@horizontours.com</p>
-                    <p>Phone: +1 (800) 456-7890</p>
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
+                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Added translation scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-selector button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setLanguage(e.target.getAttribute('data-lang'));
+                });
+            });
+        });
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <style>
+      .logo-text { fill: #F5EBE0; font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; letter-spacing: 2px; }
+      .logo-accent { fill: #D4A574; }
+    </style>
+  </defs>
+  <!-- Minimalist horizon line -->
+  <line x1="10" y1="30" x2="50" y2="30" stroke="#D4A574" stroke-width="2" />
+  <circle cx="55" cy="30" r="6" fill="#D4A574" />
+  <text x="70" y="38" class="logo-text">HORIZON</text>
+</svg>

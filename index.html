@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon - Premium Travel Agency | Explore Australia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Add language selector styles -->
+    <link rel="stylesheet" href="assets/css/language-selector.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-wrapper">
+                <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="/destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                <li><a href="/services.html" data-i18n="nav.services">Services</a></li>
+                <li><a href="/reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                <li><a href="/contact.html" data-i18n="nav.contact">Contact</a></li>
+                <!-- Add language selector inside mobile menu -->
+                <li class="mobile-lang-selector">
+                    <div class="lang-selector">
+                        <button data-lang="en" class="active">EN</button>
+                        <button data-lang="ja">日本語</button>
+                    </div>
+                </li>
+            </ul>
+            <!-- Remove desktop language selector, keep BOOK NOW button -->
+            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <video autoplay muted loop playsinline poster="public/images/hero-destination.jpg" class="hero-video">
+                <source src="/assets/images/video.mp4" type="video/mp4">
+                <source src="your-video-url.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-label" data-i18n="hero.discover">Discover Your Next Adventure</p>
+            <h1 class="hero-title" data-i18n="hero.explore">Explore Australia Together</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Curated premium travel experiences crafted for the discerning traveler</p>
+            <button class="hero-btn" data-i18n="hero.enquire">ENQUIRE NOW</button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Destinations Preview Section -->
+    <section class="destinations-preview" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="destinations.featured">Featured Destinations</h2>
+                <p class="section-subtitle" data-i18n="destinations.subtitle">Handpicked locations for unforgettable journeys</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card destination-large">
+                    <img src="public/images/gallery-1.jpg" alt="Luxury Resorts" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3 data-i18n="destinations.luxury">Luxury Resorts</h3>
+                        <p data-i18n="destinations.luxuryDesc">Premium accommodations</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="public/images/gallery-2.jpg" alt="Adventure Tours" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3 data-i18n="destinations.adventure">Adventure</h3>
+                        <p data-i18n="destinations.adventureDesc">Thrilling experiences</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="public/images/gallery-3.jpg" alt="Beach Paradise" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3 data-i18n="destinations.beach">Beach Paradise</h3>
+                        <p data-i18n="destinations.beachDesc">Tropical escapes</p>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="public/images/gallery-4.jpg" alt="Cultural Tours" class="destination-img">
+                    <div class="destination-overlay">
+                        <h3 data-i18n="destinations.cultural">Cultural</h3>
+                        <p data-i18n="destinations.culturalDesc">Authentic experiences</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Collage Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="gallery.title">Gallery Moments</h2>
+                <p class="section-subtitle" data-i18n="gallery.subtitle">Real stories from our travelers</p>
+            </div>
+            
+            <div class="gallery-masonry">
+                <div class="gallery-item gallery-item-large">
+                    <img src="public/images/gallery-1.jpg" alt="Gallery 1">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label" data-i18n="gallery.luxury">Luxury Living</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="public/images/gallery-2.jpg" alt="Gallery 2">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label" data-i18n="gallery.adventure">Adventure</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="public/images/gallery-3.jpg" alt="Gallery 3">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label" data-i18n="gallery.tropical">Tropical</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item gallery-item-wide">
+                    <img src="public/images/gallery-4.jpg" alt="Gallery 4">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label" data-i18n="gallery.cultural">Cultural</span>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="public/images/gallery-5.jpg" alt="Gallery 5">
+                    <div class="gallery-overlay">
+                        <span class="gallery-label" data-i18n="gallery.romance">Romance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="services.title">Our Services</h2>
+                <p class="section-subtitle" data-i18n="services.subtitle">Comprehensive travel solutions tailored to your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3 data-i18n="services.customItineraries">Custom Itineraries</h3>
+                    <p data-i18n="services.customDesc">Personalized travel plans designed exclusively for you</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3 data-i18n="services.luxury">Luxury Accommodations</h3>
+                    <p data-i18n="services.luxuryDesc">Premier hotels and resorts handpicked for excellence</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3 data-i18n="services.guides">Expert Guides</h3>
+                    <p data-i18n="services.guidesDesc">Knowledgeable local experts for immersive experiences</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <h3 data-i18n="services.support">24/7 Support</h3>
+                    <p data-i18n="services.supportDesc">Round-the-clock assistance during your journey</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-label" data-i18n="about.label">Who We Are</p>
+                    <h2 class="about-title" data-i18n="about.title">Premium Travel Experiences</h2>
+                    <p class="about-text" data-i18n="about.text">At Horizon Tours & Travels, we believe that travel is more than just visiting destinations—it's about creating unforgettable memories and experiencing the world's most beautiful places with elegance and sophistication. With over a decade of expertise, we craft bespoke journeys that exceed expectations.</p>
+                    <ul class="about-features">
+                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature1">Curated destinations</span></li>
+                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature2">Expert local guides</span></li>
+                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature3">Luxury accommodations</span></li>
+                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature4">Personalized service</span></li>
+                    </ul>
+                    <button class="about-btn" data-i18n="about.explore">EXPLORE MORE</button>
+                </div>
+                
+                <div class="about-image">
+                    <img src="public/images/gallery-5.jpg" alt="About Us" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <p class="reviews-label" data-i18n="reviews.label">Client Testimonials</p>
+                <h2 class="section-title" data-i18n="reviews.title">Our Travelers' Stories</h2>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="reviews.honeymoonText">"Horizon Tours crafted the perfect honeymoon experience. Every detail was meticulously planned, from the luxury accommodations to the private sunset tour. Absolutely unforgettable!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">EM</div>
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="reviews.emily">Emily Mitchell</p>
+                            <p class="author-title" data-i18n="reviews.emily2024">Honeymoon, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="reviews.adventureText">"The adventure tour exceeded all my expectations. The guides were knowledgeable, accommodations were top-tier, and the experiences were truly authentic. I'm already planning my next trip!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">JA</div>
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="reviews.james">James Anderson</p>
+                            <p class="author-title" data-i18n="reviews.james2024">Adventure Tour, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="reviews.familyText">"Premium service from start to finish. Horizon's attention to detail and personalized approach made our family vacation truly special. Worth every penny!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">SH</div>
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="reviews.sarah">Sarah Harrison</p>
+                            <p class="author-title" data-i18n="reviews.sarah2024">Family Trip, 2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="reviews.businessText">"Best travel agency I've worked with. Their luxury connections and local expertise opened doors to experiences I never thought possible. Highly recommended!"</p>
+                    <div class="review-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <p class="author-name" data-i18n="reviews.michael">Michael Chen</p>
+                            <p class="author-title" data-i18n="reviews.michael2024">Luxury Tour, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-i18n="cta.ready">Ready to Plan Your Dream Journey?</h2>
+            <p data-i18n="cta.subtitle">Let our travel experts create a personalized experience just for you</p>
+            <button class="cta-primary-btn" data-i18n="cta.start">START PLANNING TODAY</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">
+                        <a href="/index.html">
+                            <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
+                        </a>
+                    </h3>
+                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="#gallery" data-i18n="gallery.title">Gallery</a></li>
+                        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer.company">Company</h4>
+                    <ul>
+                        <li><a href="#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="/contact.html" data-i18n="footer.contact">Contact</a></li>
+                        <li><a href="/reviews.html" data-i18n="nav.reviews">Reviews</a></li>
+                        <li><a href="/contact.html" data-i18n="footer.faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contactTitle">Contact</h4>
+                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
+                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add translation and language switcher scripts -->
+    <script src="assets/js/translations.js"></script>
+    <script>
+        // Add language switcher functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.lang-selector button').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    setLanguage(e.target.getAttribute('data-lang'));
+                });
+            });
+        });
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

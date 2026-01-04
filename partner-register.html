@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Partner | Horizon DMC</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .form-section {
+            padding: 150px 0 100px;
+            background: var(--neutral-light);
+            min-height: 100vh;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-title {
+            font-family: "Playfair Display", serif;
+            font-size: 36px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: "Poppins", sans-serif;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .file-upload {
+            border: 2px dashed #ccc;
+            padding: 30px;
+            text-align: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload:hover {
+            border-color: var(--accent-gold);
+            background: rgba(212, 165, 116, 0.05);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script src="assets/js/navbar-init.js"></script>
+    <script src="assets/js/translations.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavbar('', true);
+        });
+    </script>
+    <!-- Navigation (Simplified) -->
+
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1 class="form-title" data-i18n="partner.title">Partner Registration</h1>
+                    <p data-i18n="partner.subtitle">Join our network of premium travel agents. Verification required.
+                    </p>
+                </div>
+
+                <form id="partnerForm">
+                    <!-- Company Details -->
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="partner.companyName">Company Name</label>
+                        <input type="text" id="companyName" name="companyName" class="form-input"
+                            data-i18n="partner.companyName" placeholder="e.g. Luxury Travels Ltd" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="partner.country">Country of Registration</label>
+                            <select id="country" name="country" class="form-select" required>
+                                <option value="" data-i18n="partner.selectCountry">Select Country</option>
+                                <option value="UK" data-i18n="partner.uk">United Kingdom</option>
+                                <option value="US" data-i18n="partner.us">USA</option>
+                                <option value="IN" data-i18n="partner.in">India</option>
+                                <option value="AE" data-i18n="partner.ae">UAE (GCC)</option>
+                                <option value="JP" data-i18n="partner.jp">Japan</option>
+                                <option value="DE" data-i18n="partner.de">Germany</option>
+                                <option value="OT" data-i18n="partner.other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="partner.license">IATA / TIDS / License Number</label>
+                            <input type="text" id="license" name="license" class="form-input"
+                                data-i18n="partner.license" placeholder="License #" required>
+                        </div>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="partner.contactPerson">Contact Person</label>
+                            <input type="text" id="contactName" name="contactName" class="form-input"
+                                data-i18n="partner.contactPerson" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="partner.jobTitle">Job Title</label>
+                            <input type="text" id="jobTitle" name="jobTitle" class="form-input"
+                                data-i18n="partner.jobTitle" placeholder="e.g. Director / Senior Consultant">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="partner.businessEmail">Business Email</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                data-i18n="partner.businessEmail" placeholder="name@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="partner.phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" data-i18n="partner.phone"
+                                placeholder="+1 ..." required>
+                        </div>
+                    </div>
+
+                    <!-- Business Profile -->
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="partner.annualPax">Estimated Annual Pax to ANZ</label>
+                        <select id="pax" name="pax" class="form-select">
+                            <option value="<50" data-i18n="partner.paxLess50">Less than 50</option>
+                            <option value="50-200" data-i18n="partner.pax50_200">50 - 200</option>
+                            <option value="200-500" data-i18n="partner.pax200_500">200 - 500</option>
+                            <option value="500+" data-i18n="partner.pax500Plus">500+</option>
+                        </select>
+                    </div>
+
+                    <!-- Document Upload -->
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="partner.uploadLicense">Upload Trade License / Business
+                            Registration</label>
+                        <div class="file-upload">
+                            <p style="margin-bottom: 10px; color: var(--neutral-gray);" data-i18n="partner.dragDrop">
+                                Drag & drop or click to upload
+                                PDF/JPG</p>
+                            <input type="file" accept=".pdf,.jpg,.png" required style="display: none;"
+                                id="licenseUpload">
+                            <button type="button" class="cta-btn" data-i18n="partner.selectFile"
+                                onclick="document.getElementById('licenseUpload').click()">Select File</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="hero-btn" data-i18n="partner.submit"
+                        style="width: 100%; margin-top: 20px;">SUBMIT FOR
+                        APPROVAL</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="successOverlay" class="success-overlay">
+        <div class="success-modal">
+            <div class="success-icon">✓</div>
+            <h2 data-i18n="partner.successTitle">Application Received!</h2>
+            <p data-i18n="partner.successText">Thank you for choosing Horizon DMC. A confirmation email has been sent to
+                your business address. Our team
+                will review your credentials and contact you within 24 hours.</p>
+            <button class="success-close-btn" data-i18n="partner.backHome"
+                onclick="window.location.href='index.html'">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        // Replace this with your actual Google Apps Script Web App URL
+        const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbzuosNnc8vrf_CArjgehJmubZ4J0kP5f7FUh3SUGcp-A5-P6ovVHO4fqHd_QFfPIHgd0Q/exec';
+
+        document.getElementById('partnerForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Submitting...';
+            btn.disabled = true;
+
+            // Collect form data
+            const formData = {
+                type: 'partner',
+                id: 'APP-' + Date.now().toString().slice(-6),
+                companyName: document.getElementById('companyName').value,
+                country: document.getElementById('country').value,
+                license: document.getElementById('license').value,
+                contactName: document.getElementById('contactName').value,
+                jobTitle: document.getElementById('jobTitle').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                pax: document.getElementById('pax').value
+            };
+
+            // 1. Save to LocalStorage (as local backup)
+            let applications = JSON.parse(localStorage.getItem('partnerApplications') || '[]');
+            applications.unshift({ ...formData, status: 'Pending', date: new Date().toLocaleDateString() });
+            localStorage.setItem('partnerApplications', JSON.stringify(applications));
+
+            // 2. Send to Google Sheets / SMTP
+            fetch(BACKEND_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+                .then(() => {
+                    document.getElementById('successOverlay').style.display = 'flex';
+                    setTimeout(() => document.getElementById('successOverlay').classList.add('active'), 10);
+                })
+                .catch(err => {
+                    console.error('Backend Error:', err);
+                    document.getElementById('successOverlay').style.display = 'flex';
+                    setTimeout(() => document.getElementById('successOverlay').classList.add('active'), 10);
+                });
+        });
+    </script>
+
+</body>
+
+</html>

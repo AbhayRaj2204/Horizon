@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div style="padding: 150px 20px; text-align: center;">
+        <h1>Mobile Menu Test Page</h1>
+        <p>Click the hamburger menu (☰) in the top right to test mobile navigation</p>
+        <p>Then click on "Destinations" → "Australia" or "New Zealand"</p>
+    </div>
+
+    <script src="assets/js/navbar-init.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavbar('', false);
+
+            // Debug: Check if elements exist after a delay
+            setTimeout(() => {
+                console.log('=== MOBILE MENU DEBUG ===');
+                console.log('Hamburger:', document.querySelector('.hamburger'));
+                console.log('Nav menu:', document.querySelector('.nav-menu'));
+                console.log('Destinations link:', document.querySelector('.nav-item-dropdown > a'));
+                console.log('Australia link:', document.querySelectorAll('.dropdown-submenu > a')[0]);
+                console.log('New Zealand link:', document.querySelectorAll('.dropdown-submenu > a')[1]);
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>

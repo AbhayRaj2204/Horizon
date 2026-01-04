@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Connection Form | Horizon DMC</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/translations.js"></script>
+    <style>
+        body {
+            overflow-y: auto !important;
+            background: #f8fafc;
+        }
+
+        .portal-bg {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .form-card {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            padding: 0;
+            /* Remove padding to allow header to touch edges */
+            border-radius: 16px;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .form-header-dark {
+            background: #0f172a;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .form-body {
+            padding: 40px;
+        }
+
+        .form-logo {
+            width: 180px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 28px;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-header p {
+            color: #64748b;
+            font-size: 15px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.1);
+        }
+
+        .form-textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-dark);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3);
+        }
+
+        @media (max-width: 500px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="portal-bg">
+        <div class="form-card">
+            <div class="form-header-dark">
+                <a href="../index.html">
+                    <img src="../assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon DMC" class="form-logo">
+                </a>
+            </div>
+
+            <div class="form-body">
+                <div class="form-header">
+                    <h1 data-i18n="agent.title">Agent Connection Form</h1>
+                    <p data-i18n="agent.subtitle">Register your interest to partner with Horizon DMC. Our team will
+                        contact you shortly with
+                        agent-exclusive rates.</p>
+                </div>
+
+                <form id="agentInquiryForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="agent.contactPerson">Contact Person</label>
+                            <input type="text" id="contactName" class="form-input" data-i18n="agent.contactPerson"
+                                placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="agent.agencyName">Agency Name</label>
+                            <input type="text" id="agencyName" class="form-input" data-i18n="agent.agencyName"
+                                placeholder="Your Travel Agency" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="agent.workEmail">Work Email</label>
+                            <input type="email" id="email" class="form-input" data-i18n="agent.workEmail"
+                                placeholder="email@agency.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="agent.contactNumber">Contact Number</label>
+                            <input type="tel" id="phone" class="form-input" data-i18n="agent.contactNumber"
+                                placeholder="+1 234..." required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="agent.country">Country</label>
+                            <input type="text" id="country" class="form-input" data-i18n="agent.country"
+                                placeholder="Office Location" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="agent.iataNo">IATA / Reg No.</label>
+                            <input type="text" id="iataNo" class="form-input" data-i18n="agent.iataNo"
+                                placeholder="License Number">
+                        </div>
+                        <div class="form-group full-width">
+                            <label class="form-label" data-i18n="agent.message">Brief Inquiry / Message</label>
+                            <textarea id="message" class="form-textarea" data-i18n="agent.message"
+                                placeholder="How can we help you? Specific regions of interest?"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitText" data-i18n="agent.sendInquiry">Send
+                        Inquiry</button>
+                </form>
+
+                <a href="../index.html" data-i18n="agent.backHome"
+                    style="display: block; text-align: center; margin-top: 25px; color: #94a3b8; text-decoration: none; font-size: 13px;">←
+                    Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successOverlay" class="success-overlay">
+        <div class="success-modal">
+            <div class="success-icon">✓</div>
+            <h2 data-i18n="agent.successTitle">Inquiry Sent!</h2>
+            <p data-i18n="agent.successText">Thank you for reaching out. A confirmation email has been sent to you, and
+                our team will contact you
+                within 24 hours.</p>
+            <button class="success-close-btn" data-i18n="agent.backHome"
+                onclick="window.location.href='../index.html'">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        const BACKEND_URL = 'https://script.google.com/macros/s/AKfycbzuosNnc8vrf_CArjgehJmubZ4J0kP5f7FUh3SUGcp-A5-P6ovVHO4fqHd_QFfPIHgd0Q/exec';
+
+        document.getElementById('agentInquiryForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitText');
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+
+            // Collect form data
+            const formData = {
+                type: 'agent',
+                id: 'AGN-' + Math.random().toString(36).substr(2, 9).toUpperCase(),
+                contactName: document.getElementById('contactName').value,
+                agencyName: document.getElementById('agencyName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                country: document.getElementById('country').value,
+                iataNo: document.getElementById('iataNo').value || 'N/A',
+                message: document.getElementById('message').value
+            };
+
+            // 1. Save to LocalStorage (as backup)
+            let agentRequests = JSON.parse(localStorage.getItem('agentRequests') || '[]');
+            agentRequests.unshift({ ...formData, date: new Date().toLocaleDateString(), status: 'New' });
+            localStorage.setItem('agentRequests', JSON.stringify(agentRequests));
+
+            // 2. Send to Google Sheets / SMTP
+            fetch(BACKEND_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            })
+                .then(() => {
+                    document.getElementById('successOverlay').style.display = 'flex';
+                    setTimeout(() => document.getElementById('successOverlay').classList.add('active'), 10);
+                })
+                .catch(err => {
+                    console.error('Backend Error:', err);
+                    document.getElementById('successOverlay').style.display = 'flex';
+                    setTimeout(() => document.getElementById('successOverlay').classList.add('active'), 10);
+                });
+        });
+    </script>
+</body>
+
+</html>

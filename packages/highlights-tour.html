@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Australia Highlights Tour - Horizon Tours</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/language-selector.css">
+    <style>
+        .package-detail-container {
+            max-width: 1200px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .itinerary-section {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .day-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent-gold);
+            position: relative;
+        }
+
+        .day-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        .day-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .day-content {
+            color: #555;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        .package-hero {
+            height: 400px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 80px;
+        }
+
+        .package-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 100px;
+        }
+
+        .btn-inquiry {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: var(--accent-gold);
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 30px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-inquiry:hover {
+            background: var(--primary-dark);
+        }
+
+        @media (max-width: 900px) {
+            .package-detail-container {
+                grid-template-columns: 1fr;
+            }
+
+            .package-hero {
+                height: 300px;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script src="../assets/js/navbar-init.js"></script>
+    <script src="../assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavbar('../', true);
+        });
+    </script>
+
+    <div class="package-hero" style="background-image: url('../public/images/pkg-highlights.jpg');">
+        <div class="hero-text">
+            <h1 data-i18n="packages.pkg4.title">Australia Highlights Tour</h1>
+            <p data-i18n="packages.pkg4.duration">Melbourne | Gold Coast | Sydney</p>
+        </div>
+    </div>
+
+    <div class="package-detail-container">
+        <div class="itinerary-section">
+            <h2 style="margin-bottom: 30px; font-family: 'Playfair Display', serif;" data-i18n="package.itinerary">Tour
+                Itinerary</h2>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 01 | Arrive Melbourne – Yarra River Cruise</div>
+                <div class="day-content">
+                    <p>Welcome to Melbourne, Australia’s cultural capital. Upon arrival, meet our representative and
+                        enjoy a private transfer to your hotel. Check in and relax after your journey.</p>
+                    <p>In the evening, experience the charm of the city with a Yarra River Cruise, offering beautiful
+                        views of Melbourne’s skyline and riverside attractions (at your own pace).</p>
+                    <p>Overnight stay in Melbourne.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 02 | Melbourne City Tour & Phillip Island Penguin Parade (SIC)</div>
+                <div class="day-content">
+                    <p>After breakfast, set out on a half-day Melbourne City Tour on a shared basis. Discover iconic
+                        landmarks such as Federation Square, St. Patrick’s Cathedral, Fitzroy Gardens, Royal Botanic
+                        Gardens, and more.</p>
+                    <p>Later in the day, travel to Phillip Island to witness the world-famous Penguin Parade, where
+                        little penguins emerge from the ocean at sunset—an unforgettable wildlife experience.</p>
+                    <p>Overnight stay in Melbourne.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 03 | Great Ocean Road & 12 Apostles Tour (SIC)</div>
+                <div class="day-content">
+                    <p>Post breakfast, enjoy a full-day excursion along the spectacular Great Ocean Road, one of the
+                        most scenic coastal drives in the world.</p>
+                    <p>Marvel at natural wonders including the 12 Apostles, Loch Ard Gorge, and the dramatic cliffs of
+                        Port Campbell National Park. Capture breathtaking ocean views before returning to Melbourne in
+                        the evening.</p>
+                    <p>Overnight stay in Melbourne.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 04 | Fly to Gold Coast – Glow Worms Cave Experience</div>
+                <div class="day-content">
+                    <p>After breakfast, check out and transfer to the airport for your flight to the Gold Coast. Upon
+                        arrival, enjoy a private transfer to your hotel.</p>
+                    <p>In the evening, experience the magical Glow Worms Cave, where thousands of glowing worms
+                        illuminate the ancient caves—a truly unique natural phenomenon.</p>
+                    <p>Overnight stay in Gold Coast.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 05 | Sea World Theme Park (Private Transfers)</div>
+                <div class="day-content">
+                    <p>After breakfast, enjoy a full-day visit to Sea World, one of Australia’s most popular marine
+                        theme parks.</p>
+                    <p>Enjoy exciting rides, captivating marine animal shows, dolphin encounters, and family-friendly
+                        attractions. Return to your hotel by private transfer.</p>
+                    <p>Overnight stay in Gold Coast.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 06 | Dreamworld Theme Park (Private Transfers)</div>
+                <div class="day-content">
+                    <p>Today, head out for a fun-filled day at Dreamworld, Australia’s largest theme park.</p>
+                    <p>Explore thrilling rides, Tiger Island, DreamWorks Experience zones, and attractions suitable for
+                        all age groups. After an exciting day, return to your hotel by private transfer.</p>
+                    <p>Overnight stay in Gold Coast.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 07 | Fly to Sydney – Sydney Harbour Dinner Cruise</div>
+                <div class="day-content">
+                    <p>Check out from your hotel and fly to Sydney. Upon arrival, enjoy a private transfer to your
+                        hotel.</p>
+                    <p>In the evening, indulge in a Sydney Harbour Dinner Cruise, featuring delicious cuisine and
+                        stunning night views of the Sydney Opera House and Harbour Bridge.</p>
+                    <p>Overnight stay in Sydney.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 08 | Sydney City Tour & Attractions (Hop-On Hop-Off)</div>
+                <div class="day-content">
+                    <p>After breakfast, explore Sydney with a Big Bus Hop-On Hop-Off City Tour, offering flexibility to
+                        discover the city at your own pace.</p>
+                    <p>Visit major attractions including the Sydney Opera House, Sydney Tower Eye, and SEA LIFE Sydney
+                        Aquarium.</p>
+                    <p>Overnight stay in Sydney.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 09 | Blue Mountains Full-Day Tour</div>
+                <div class="day-content">
+                    <p>Today, enjoy a scenic excursion to the Blue Mountains, a UNESCO World Heritage region.</p>
+                    <p>Visit the famous Three Sisters, enjoy panoramic valley views, and experience thrilling rides at
+                        Scenic World, including the Scenic Railway, Skyway, and Cableway.</p>
+                    <p>Overnight stay in Sydney.</p>
+                </div>
+            </div>
+            <div class="day-item">
+                <div class="day-title">🗓 Day 10 | Departure</div>
+                <div class="day-content">
+                    <p>After breakfast, check out from the hotel and enjoy a private transfer to the airport for your
+                        return flight.</p>
+                    <p>Depart with unforgettable memories of Australia’s iconic cities, wildlife, coastlines, and
+                        adventures.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sidebar-info">
+            <div class="sidebar-card">
+                <h3 data-i18n="package.details">Package Details</h3>
+                <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                    <li style="margin-bottom: 15px;"><strong data-i18n="package.duration">Duration:</strong> <span
+                            data-i18n="packages.pkg4.duration">10 Days</span></li>
+                    <li style="margin-bottom: 15px;"><strong data-i18n="package.destinations">Destinations:</strong>
+                        Melbourne | Gold Coast | Sydney</li>
+                    <li style="margin-bottom: 15px;"><strong data-i18n="package.type">Type:</strong> B2B Inbound Package
+                    </li>
+                </ul>
+                <p style="font-size: 14px; color: #666;" data-i18n="package.sampleNote">This is a sample itinerary
+                    designed for agents. Rates are
+                    available upon request through the Agent Portal.</p>
+                <a href="../agent/portal.html" class="btn-inquiry" data-i18n="package.inquireNow">INQUIRE NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">
+                        <a href="../index.html">
+                            <img src="../assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo"
+                                class="footer-logo-img">
+                        </a>
+                    </h3>
+                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New
+                        Zealand.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="../agent/portal.html" data-i18n="b2b.nav.agentPortal">Agent Portal</a></li>
+                        <li><a href="../partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a>
+                        </li>
+                        <li><a href="../destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+                        <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer.tradeSupport">Trade Support</h4>
+                    <ul>
+                        <li><a href="../index.html#about" data-i18n="footer.about">About Us</a></li>
+                        <li><a href="../contact.html" data-i18n="nav.contact">Contact Ops</a></li>
+                        <li><a href="../services.html#reviews" data-i18n="nav.reviews">Client Reviews</a></li>
+                        <li><a href="#" data-i18n="footer.agentTerms">Agent Terms (NDA)</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 data-i18n="footer.contactHQ">Contact HQ</h4>
+                    <p data-i18n="footer.emailTrade">Email: agents@horizontours.com</p>
+                    <p data-i18n="footer.phoneTrade">Phone: +61 2 8000 9999 (SYD)</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+
+</html>

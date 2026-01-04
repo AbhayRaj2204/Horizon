@@ -1,267 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon - Premium Travel Agency | Explore Australia</title>
+    <title>Horizon DMC | Premier B2B Inbound Partner</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Add language selector styles -->
     <link rel="stylesheet" href="assets/css/language-selector.css">
 </head>
+
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-wrapper">
-                <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="logo-img">
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-                <li><a href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
-                <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-                <li><a href="reviews.html" data-i18n="nav.reviews">Reviews</a></li>
-                <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
-                <!-- Add language selector inside mobile menu -->
-                <li class="mobile-lang-selector">
-                    <div class="lang-selector">
-                        <button data-lang="en" class="active">EN</button>
-                        <button data-lang="ja">日本語</button>
-                    </div>
-                </li>
-            </ul>
-            <!-- Remove desktop language selector, keep BOOK NOW button -->
-            <button class="cta-btn" data-i18n="nav.bookNow">BOOK NOW</button>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
+    <script src="assets/js/navbar-init.js"></script>
+    <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavbar('', false); // Path, Not scrolled
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-background">
             <video autoplay muted loop playsinline class="hero-video">
                 <source src="assets/images/video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
         </div>
         <div class="hero-content">
-            <p class="hero-label" data-i18n="hero.discover">Discover Your Next Adventure</p>
-            <h1 class="hero-title" data-i18n="hero.explore">Explore Australia Together</h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">Curated premium travel experiences crafted for the discerning traveler</p>
-            <button class="hero-btn" data-i18n="hero.enquire">ENQUIRE NOW</button>
+            <p class="hero-label" data-i18n="b2b.hero.label">B2B INBOUND SPECIALISTS</p>
+            <h1 class="hero-title" data-i18n="b2b.hero.title">Your Trusted B2B Destination Management Company</h1>
+            <p class="hero-subtitle" data-i18n="b2b.hero.subtitle">Exclusively for travel agents. Net rates, white-label
+                itineraries, and 24/7
+                on-ground support.</p>
+            <div style="display: flex; gap: 20px; justify-content: center;">
+                <a href="partner-register.html" class="hero-btn" data-i18n="b2b.hero.requestRates">REQUEST RATES</a>
+                <a href="agent/portal.html" class="hero-btn" style="background: transparent; border: 2px solid white;"
+                    data-i18n="b2b.hero.accessPortal">ACCESS
+                    PORTAL</a>
+            </div>
         </div>
         <div class="scroll-indicator">
             <div class="mouse"></div>
         </div>
     </section>
 
-    <!-- Destinations Preview Section -->
-    <section class="destinations-preview" id="destinations">
+    <!-- Why Choose Us (B2B Value Prop) -->
+    <section class="services" id="why-partner">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="destinations.featured">Featured Destinations</h2>
-                <p class="section-subtitle" data-i18n="destinations.subtitle">Handpicked locations for unforgettable journeys</p>
+                <h2 class="section-title" data-i18n="services.specialties">Our B2B Specializations</h2>
+                <p class="section-subtitle" data-i18n="services.specialtiesSubtitle">Tailored ground handling for every
+                    traveler type</p>
             </div>
-            
-            <div class="destinations-grid">
-                <div class="destination-card destination-large">
-                    <img src="public/images/gallery-1.jpg" alt="Luxury Resorts" class="destination-img">
-                    <div class="destination-overlay">
-                        <h3 data-i18n="destinations.luxury">Luxury Resorts</h3>
-                        <p data-i18n="destinations.luxuryDesc">Premium accommodations</p>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="public/images/gallery-2.jpg" alt="Adventure Tours" class="destination-img">
-                    <div class="destination-overlay">
-                        <h3 data-i18n="destinations.adventure">Adventure</h3>
-                        <p data-i18n="destinations.adventureDesc">Thrilling experiences</p>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="public/images/gallery-3.jpg" alt="Beach Paradise" class="destination-img">
-                    <div class="destination-overlay">
-                        <h3 data-i18n="destinations.beach">Beach Paradise</h3>
-                        <p data-i18n="destinations.beachDesc">Tropical escapes</p>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="public/images/gallery-4.jpg" alt="Cultural Tours" class="destination-img">
-                    <div class="destination-overlay">
-                        <h3 data-i18n="destinations.cultural">Cultural</h3>
-                        <p data-i18n="destinations.culturalDesc">Authentic experiences</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Image Gallery Collage Section -->
-    <section class="gallery" id="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="gallery.title">Gallery Moments</h2>
-                <p class="section-subtitle" data-i18n="gallery.subtitle">Real stories from our travelers</p>
-            </div>
-            
-            <div class="gallery-masonry">
-                <div class="gallery-item gallery-item-large">
-                    <img src="public/images/gallery-1.jpg" alt="Gallery 1">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label" data-i18n="gallery.luxury">Luxury Living</span>
-                    </div>
+            <div class="services-grid" style="margin-bottom: 60px;">
+                <div class="service-card">
+                    <div style="font-size: 40px; margin-bottom: 20px;">👤</div>
+                    <h3 data-i18n="services.fit">FIT (Free Independent Traveler)</h3>
+                    <p data-i18n="services.fitDesc">Customized travel solutions for solo travelers and couples who
+                        prefer independent journeys.</p>
                 </div>
-                
-                <div class="gallery-item">
-                    <img src="public/images/gallery-2.jpg" alt="Gallery 2">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label" data-i18n="gallery.adventure">Adventure</span>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="public/images/gallery-3.jpg" alt="Gallery 3">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label" data-i18n="gallery.tropical">Tropical</span>
-                    </div>
-                </div>
-                
-                <div class="gallery-item gallery-item-wide">
-                    <img src="public/images/gallery-4.jpg" alt="Gallery 4">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label" data-i18n="gallery.cultural">Cultural</span>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="public/images/gallery-5.jpg" alt="Gallery 5">
-                    <div class="gallery-overlay">
-                        <span class="gallery-label" data-i18n="gallery.romance">Romance</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="services.title">Our Services</h2>
-                <p class="section-subtitle" data-i18n="services.subtitle">Comprehensive travel solutions tailored to your needs</p>
+                <div class="service-card">
+                    <div style="font-size: 40px; margin-bottom: 20px;">👥</div>
+                    <h3 data-i18n="services.groups">Group Travel</h3>
+                    <p data-i18n="services.groupsDesc">Seamless coordination for leisure groups, student tours, and
+                        social clubs of all sizes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div style="font-size: 40px; margin-bottom: 20px;">🏢</div>
+                    <h3 data-i18n="services.mice">MICE (Meetings, Incentives, Conferences, Events)</h3>
+                    <p data-i18n="services.miceDesc">Professional handling of corporate events, incentive trips, and
+                        large-scale summits.</p>
+                </div>
             </div>
-            
+
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="b2b.advantage.title">The Horizon Advantage</h2>
+                <p class="section-subtitle" data-i18n="b2b.advantage.subtitle">Why leading global agents choose us as
+                    their ground partner</p>
+            </div>
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-number">01</div>
-                    <h3 data-i18n="services.customItineraries">Custom Itineraries</h3>
-                    <p data-i18n="services.customDesc">Personalized travel plans designed exclusively for you</p>
+                    <h3 data-i18n="b2b.advantage.netRates">Contracted Net Rates</h3>
+                    <p data-i18n="b2b.advantage.netRatesDesc">Access competitive net rates at over 2,000 properties
+                        across the globe.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-number">02</div>
-                    <h3 data-i18n="services.luxury">Luxury Accommodations</h3>
-                    <p data-i18n="services.luxuryDesc">Premier hotels and resorts handpicked for excellence</p>
+                    <h3 data-i18n="b2b.advantage.whiteLabel">White-Label Itineraries</h3>
+                    <p data-i18n="b2b.advantage.whiteLabelDesc">Generate beautiful PDF proposals branded with YOUR
+                        agency logo in minutes.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-number">03</div>
-                    <h3 data-i18n="services.guides">Expert Guides</h3>
-                    <p data-i18n="services.guidesDesc">Knowledgeable local experts for immersive experiences</p>
+                    <h3 data-i18n="b2b.advantage.ops">24/7 Operations</h3>
+                    <p data-i18n="b2b.advantage.opsDesc">Our local teams provide round-the-clock
+                        support for your pax.</p>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-number">04</div>
-                    <h3 data-i18n="services.support">24/7 Support</h3>
-                    <p data-i18n="services.supportDesc">Round-the-clock assistance during your journey</p>
+                    <h3 data-i18n="b2b.advantage.turnaround">Fast Turnaround</h3>
+                    <p data-i18n="b2b.advantage.turnaroundDesc">Quotes returned within 4 hours. Instant confirmation on
+                        500+ top-selling products.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Tour Packages Section -->
+    <section class="packages" id="packages" style="padding: 120px 0; background: var(--neutral-light);">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <p class="about-label" data-i18n="about.label">Who We Are</p>
-                    <h2 class="about-title" data-i18n="about.title">Premium Travel Experiences</h2>
-                    <p class="about-text" data-i18n="about.text">At Horizon Tours & Travels, we believe that travel is more than just visiting destinations—it's about creating unforgettable memories and experiencing the world's most beautiful places with elegance and sophistication. With over a decade of expertise, we craft bespoke journeys that exceed expectations.</p>
-                    <ul class="about-features">
-                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature1">Curated destinations</span></li>
-                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature2">Expert local guides</span></li>
-                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature3">Luxury accommodations</span></li>
-                        <li><span class="check-mark">✓</span> <span data-i18n="about.feature4">Personalized service</span></li>
-                    </ul>
-                    <button class="about-btn" data-i18n="about.explore">EXPLORE MORE</button>
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="packages.title">Featured Inbound Packages</h2>
+                <p class="section-subtitle" data-i18n="packages.subtitle">Ready-to-sell sample itineraries for your
+                    clients</p>
+            </div>
+
+            <div class="packages-grid">
+                <div class="package-card">
+                    <img src="public/images/pkg-adventure.jpg" alt="Australia Adventure" class="package-img">
+                    <div class="package-content">
+                        <span class="package-duration" data-i18n="packages.pkg1.duration">4 Nights Gold Coast | 3 Nights
+                            Cairns</span>
+                        <h3 data-i18n="packages.pkg1.title">8 Days Ultimate Australian Adventure</h3>
+                        <p data-i18n="packages.pkg1.desc">Theme Parks, Coastal Thrills, and Great Barrier Reef wonders.
+                        </p>
+                        <div class="package-footer">
+                            <a href="packages/8-days-adventure.html" class="pkg-detail-btn"
+                                data-i18n="packages.viewDetails">VIEW ITINERARY →</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="about-image">
-                    <img src="public/images/gallery-5.jpg" alt="About Us" class="about-img">
+
+                <div class="package-card">
+                    <img src="public/images/pkg-australia.jpg" alt="Australia Holiday" class="package-img">
+                    <div class="package-content">
+                        <span class="package-duration" data-i18n="packages.pkg2.duration">9 Nights / 10 Days</span>
+                        <h3 data-i18n="packages.pkg2.title">9 Nights Australia Holiday</h3>
+                        <p data-i18n="packages.pkg2.desc">Comprehensive multi-city tour covering Melbourne, Gold Coast,
+                            and Sydney.</p>
+                        <div class="package-footer">
+                            <a href="packages/9-nights-australia.html" class="pkg-detail-btn"
+                                data-i18n="packages.viewDetails">VIEW ITINERARY →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="public/images/pkg-city-escape.jpg" alt="City Escape" class="package-img">
+                    <div class="package-content">
+                        <span class="package-duration" data-i18n="packages.pkg3.duration">9 Days / 8 Nights</span>
+                        <h3 data-i18n="packages.pkg3.title">Australia City Escape</h3>
+                        <p data-i18n="packages.pkg3.desc">The perfect urban duo exploring Melbourne and Sydney's best.
+                        </p>
+                        <div class="package-footer">
+                            <a href="packages/city-escape.html" class="pkg-detail-btn"
+                                data-i18n="packages.viewDetails">VIEW ITINERARY →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="public/images/pkg-highlights.jpg" alt="Australia Highlights" class="package-img">
+                    <div class="package-content">
+                        <span class="package-duration" data-i18n="packages.pkg4.duration">10 Days</span>
+                        <h3 data-i18n="packages.pkg4.title">Australia Highlights Tour</h3>
+                        <p data-i18n="packages.pkg4.desc">Iconic landmarks and hidden gems across the Australian east
+                            coast.</p>
+                        <div class="package-footer">
+                            <a href="packages/highlights-tour.html" class="pkg-detail-btn"
+                                data-i18n="packages.viewDetails">VIEW ITINERARY →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="public/images/pkg-grand.jpg" alt="Grand Australia" class="package-img">
+                    <div class="package-content">
+                        <span class="package-duration" data-i18n="packages.pkg5.duration">13 Days</span>
+                        <h3 data-i18n="packages.pkg5.title">Grand Australia Highlights</h3>
+                        <p data-i18n="packages.pkg5.desc">An extensive journey through Melbourne, Cairns, Gold Coast,
+                            and Sydney.</p>
+                        <div class="package-footer">
+                            <a href="packages/grand-highlights.html" class="pkg-detail-btn"
+                                data-i18n="packages.viewDetails">VIEW ITINERARY →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <img src="public/images/pkg-queensland.jpg" alt="Queensland Explorer" class="package-img">
+                    <div class="package-content">
+                        <span class="package-duration" data-i18n="packages.pkg6.duration">6 Days</span>
+                        <h3 data-i18n="packages.pkg6.title">Queensland Explorer - Self Drive</h3>
+                        <p data-i18n="packages.pkg6.desc">Explore Brisbane, Sunshine Coast & Noosa at your own pace.</p>
+                        <div class="package-footer">
+                            <a href="packages/queensland-explorer.html" class="pkg-detail-btn"
+                                data-i18n="packages.viewDetails">VIEW ITINERARY →</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
+    <!-- Destinations Preview -->
+    <section class="destinations-preview" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="destinations.preview.title">Destinations We Cover</h2>
+                <p class="section-subtitle" data-i18n="destinations.preview.subtitle">Comprehensive on-ground handling
+                    across the continent</p>
+            </div>
+
+            <div class="destinations-grid">
+                <!-- Add other destinations here when available -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Trade Testimonials -->
     <section class="reviews" id="reviews">
         <div class="container">
             <div class="section-header">
-                <p class="reviews-label" data-i18n="reviews.label">Client Testimonials</p>
-                <h2 class="section-title" data-i18n="reviews.title">Our Travelers' Stories</h2>
+                <p class="reviews-label" data-i18n="reviews.tradePartners">Trade Partners</p>
+                <h2 class="section-title" data-i18n="reviews.tradeTitle">Trusted By Agents Globally</h2>
             </div>
-            
+
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p class="review-text" data-i18n="reviews.honeymoonText">"Horizon Tours crafted the perfect honeymoon experience. Every detail was meticulously planned, from the luxury accommodations to the private sunset tour. Absolutely unforgettable!"</p>
+                    <p class="review-text" data-i18n="reviews.testimonial1.text">"Horizon's B2B portal has transformed
+                        how we sell Australia. The itinerary
+                        builder saves us hours per quote."</p>
                     <div class="review-author">
-                        <div class="author-avatar">EM</div>
+                        <div class="author-avatar">SK</div>
                         <div class="author-info">
-                            <p class="author-name" data-i18n="reviews.emily">Emily Mitchell</p>
-                            <p class="author-title" data-i18n="reviews.emily2024">Honeymoon, 2024</p>
+                            <p class="author-name" data-i18n="reviews.testimonial1.author">Sunil Kumar</p>
+                            <p class="author-title" data-i18n="reviews.testimonial1.company">Travel World, India</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p class="review-text" data-i18n="reviews.adventureText">"The adventure tour exceeded all my expectations. The guides were knowledgeable, accommodations were top-tier, and the experiences were truly authentic. I'm already planning my next trip!"</p>
+                    <p class="review-text" data-i18n="reviews.testimonial2.text">"Reliable ground support is critical
+                        for our VIP clients. Horizon never drops
+                        the ball."</p>
                     <div class="review-author">
-                        <div class="author-avatar">JA</div>
+                        <div class="author-avatar">JR</div>
                         <div class="author-info">
-                            <p class="author-name" data-i18n="reviews.james">James Anderson</p>
-                            <p class="author-title" data-i18n="reviews.james2024">Adventure Tour, 2024</p>
+                            <p class="author-name" data-i18n="reviews.testimonial2.author">James Robinson</p>
+                            <p class="author-title" data-i18n="reviews.testimonial2.company">Elite Escapes, UK</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p class="review-text" data-i18n="reviews.familyText">"Premium service from start to finish. Horizon's attention to detail and personalized approach made our family vacation truly special. Worth every penny!"</p>
+                    <p class="review-text" data-i18n="reviews.testimonial3.text">"The white-label PDF feature allows us
+                        to present professional itineraries
+                        instantly."</p>
                     <div class="review-author">
-                        <div class="author-avatar">SH</div>
+                        <div class="author-avatar">MN</div>
                         <div class="author-info">
-                            <p class="author-name" data-i18n="reviews.sarah">Sarah Harrison</p>
-                            <p class="author-title" data-i18n="reviews.sarah2024">Family Trip, 2024</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text" data-i18n="reviews.businessText">"Best travel agency I've worked with. Their luxury connections and local expertise opened doors to experiences I never thought possible. Highly recommended!"</p>
-                    <div class="review-author">
-                        <div class="author-avatar">MC</div>
-                        <div class="author-info">
-                            <p class="author-name" data-i18n="reviews.michael">Michael Chen</p>
-                            <p class="author-title" data-i18n="reviews.michael2024">Luxury Tour, 2024</p>
+                            <p class="author-name" data-i18n="reviews.testimonial3.author">Miki Nakamura</p>
+                            <p class="author-title" data-i18n="reviews.testimonial3.company">JTB, Japan</p>
                         </div>
                     </div>
                 </div>
@@ -269,12 +283,13 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Partner CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2 data-i18n="cta.ready">Ready to Plan Your Dream Journey?</h2>
-            <p data-i18n="cta.subtitle">Let our travel experts create a personalized experience just for you</p>
-            <button class="cta-primary-btn" data-i18n="cta.start">START PLANNING TODAY</button>
+            <h2 data-i18n="cta.growSales">Ready to Grow Your Sales?</h2>
+            <p data-i18n="cta.registerText">Register today to access net rates and our booking engine.</p>
+            <a href="partner-register.html" class="cta-primary-btn" data-i18n="cta.registerBtn"
+                style="text-decoration: none; display: inline-block; margin-top: 20px;">REGISTER AS PARTNER</a>
         </div>
     </section>
 
@@ -285,56 +300,58 @@
                 <div class="footer-col">
                     <h3 class="footer-logo">
                         <a href="/index.html">
-                            <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo" class="footer-logo-img">
+                            <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo"
+                                class="footer-logo-img">
                         </a>
                     </h3>
-                    <p data-i18n="footer.premium">Premium travel experiences crafted with elegance and expertise.</p>
+                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company.</p>
                 </div>
-                
+
                 <div class="footer-col">
                     <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                        <li><a href="agent/portal.html" data-i18n="b2b.nav.agentPortal">Agent Portal</a></li>
+                        <li><a href="partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a></li>
                         <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
-                        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#why-partner" data-i18n="nav.services">Why Partner</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
-                    <h4 data-i18n="footer.company">Company</h4>
+                    <h4 data-i18n="footer.tradeSupport">Trade Support</h4>
                     <ul>
                         <li><a href="#about" data-i18n="footer.about">About Us</a></li>
-                        <li><a href="/contact.html" data-i18n="footer.contact">Contact</a></li>
-                        <li><a href="/reviews.html" data-i18n="nav.reviews">Reviews</a></li>
-                        <li><a href="/contact.html" data-i18n="footer.faq">FAQ</a></li>
+                        <li><a href="/contact.html" data-i18n="nav.contact">Contact Ops</a></li>
+                        <li><a href="services.html#reviews" data-i18n="nav.reviews">Client Reviews</a></li>
+                        <li><a href="#" data-i18n="footer.agentTerms">Agent Terms (NDA)</a></li>
+                        <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
-                    <h4 data-i18n="footer.contactTitle">Contact</h4>
-                    <p data-i18n="footer.email">Email: hello@horizontours.com</p>
-                    <p data-i18n="footer.phone">Phone: +1 (800) 456-7890</p>
+                    <h4 data-i18n="footer.contactHQ">Contact HQ</h4>
+                    <p data-i18n="footer.emailTrade">Email: agents@horizontours.com</p>
+                    <p data-i18n="footer.phoneTrade">Phone: +61 2 8000 9999 (SYD)</p>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
-                <p data-i18n="footer.copyright">&copy; 2025 Horizon Tours & Travels. All rights reserved.</p>
+                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Add translation and language switcher scripts -->
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/translations.js"></script>
     <script>
-        // Add language switcher functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.lang-selector button').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    setLanguage(e.target.getAttribute('data-lang'));
-                });
+        // Language selector toggle
+        document.querySelectorAll('.lang-selector button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const lang = e.target.getAttribute('data-lang');
+                setLanguage(lang);
             });
         });
     </script>
-    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

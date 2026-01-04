@@ -26,27 +26,33 @@
   color: #f4a261;
 }
 
-/* Show language selector */
+/* Default hidden, shown via helper classes */
 .lang-selector {
-    display: flex;
-    gap: 10px;
+  display: none;
+  gap: 10px;
+}
+
+.lang-selector.desktop-only,
+.lang-selector.mobile-only {
+  display: flex;
 }
 
 /* Show language selector in mobile menu */
 @media (max-width: 768px) {
-    /* Display language selector in mobile menu */
-    .mobile-lang-selector .lang-selector {
-        width: 100%;
-        padding: 20px 0;
-        margin-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        justify-content: center;
-    }
 
-    .mobile-lang-selector .lang-selector button {
-        flex: 1;
-        max-width: 100px;
-        padding: 10px 16px;
-        font-size: 0.9rem;
-    }
+  /* Display language selector in mobile menu */
+  .mobile-only .lang-selector {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+  }
+
+  .mobile-only .lang-selector button {
+    flex: 1;
+    max-width: 100px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
 }

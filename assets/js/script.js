@@ -1,3 +1,47 @@
+// Loader Management
+document.body.classList.add("loading")
+const loader = document.getElementById("loader")
+const loaderBar = document.querySelector(".loader-bar")
+
+let progress = 0
+const progressInterval = setInterval(() => {
+  if (progress < 90) {
+    progress += Math.random() * 15
+    if (progress > 90) progress = 90
+    if (loaderBar) loaderBar.style.width = `${progress}%`
+  }
+}, 100)
+
+const hideLoader = () => {
+  clearInterval(progressInterval)
+  if (loaderBar) loaderBar.style.width = "100%"
+
+  setTimeout(() => {
+    if (loader) {
+      loader.classList.add("loader-hidden")
+      document.body.classList.remove("loading")
+      const hero = document.querySelector(".hero")
+      if (hero) hero.classList.add("loaded")
+    }
+  }, 500)
+}
+
+// Check for hero loading
+const heroVideo = document.querySelector(".hero-video")
+if (heroVideo) {
+  if (heroVideo.readyState >= 3) {
+    hideLoader()
+  } else {
+    heroVideo.addEventListener("canplaythrough", hideLoader, { once: true })
+    // Fallback if video takes too long
+    setTimeout(hideLoader, 3000)
+  }
+} else {
+  window.addEventListener("load", hideLoader)
+  // Fallback
+  setTimeout(hideLoader, 2000)
+}
+
 // Navbar scroll effect
 const navbar = document.querySelector(".navbar")
 const hamburger = document.querySelector(".hamburger")
@@ -207,17 +251,6 @@ style.textContent = `
     }
 `
 document.head.appendChild(style)
-
-// Smooth page load animation
-window.addEventListener("load", () => {
-  document.body.style.opacity = "1"
-})
-
-document.body.style.opacity = "0"
-document.body.style.transition = "opacity 0.5s ease"
-setTimeout(() => {
-  document.body.style.opacity = "1"
-}, 100)
 
 // Console Easter Egg
 console.log("%c🌏 Horizon Tours & Travels", "color: #1a3a52; font-size: 24px; font-weight: bold;")

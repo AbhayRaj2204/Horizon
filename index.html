@@ -10,6 +10,19 @@
 </head>
 
 <body>
+    <!-- Premium Loader -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo">
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+            <p class="loader-text" data-i18n="cta.ready">Ready to Plan Your Dream Journey?</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <div id="navbar-placeholder"></div>
     <script src="assets/js/navbar-init.js"></script>
@@ -126,7 +139,8 @@
 
             <div class="packages-grid">
                 <div class="package-card">
-                    <img src="public/images/pkg-adventure.jpg" alt="Australia Adventure" class="package-img">
+                    <img src="public/images/pkg-adventure.jpg" alt="Australia Adventure" class="package-img"
+                        loading="lazy">
                     <div class="package-content">
                         <span class="package-duration" data-i18n="packages.pkg1.duration">4 Nights Gold Coast | 3 Nights
                             Cairns</span>
@@ -141,7 +155,8 @@
                 </div>
 
                 <div class="package-card">
-                    <img src="public/images/pkg-australia.jpg" alt="Australia Holiday" class="package-img">
+                    <img src="public/images/pkg-australia.jpg" alt="Australia Holiday" class="package-img"
+                        loading="lazy">
                     <div class="package-content">
                         <span class="package-duration" data-i18n="packages.pkg2.duration">9 Nights / 10 Days</span>
                         <h3 data-i18n="packages.pkg2.title">9 Nights Australia Holiday</h3>
@@ -155,7 +170,7 @@
                 </div>
 
                 <div class="package-card">
-                    <img src="public/images/pkg-city-escape.jpg" alt="City Escape" class="package-img">
+                    <img src="public/images/pkg-city-escape.jpg" alt="City Escape" class="package-img" loading="lazy">
                     <div class="package-content">
                         <span class="package-duration" data-i18n="packages.pkg3.duration">9 Days / 8 Nights</span>
                         <h3 data-i18n="packages.pkg3.title">Australia City Escape</h3>
@@ -169,7 +184,8 @@
                 </div>
 
                 <div class="package-card">
-                    <img src="public/images/pkg-highlights.jpg" alt="Australia Highlights" class="package-img">
+                    <img src="public/images/pkg-highlights.jpg" alt="Australia Highlights" class="package-img"
+                        loading="lazy">
                     <div class="package-content">
                         <span class="package-duration" data-i18n="packages.pkg4.duration">10 Days</span>
                         <h3 data-i18n="packages.pkg4.title">Australia Highlights Tour</h3>
@@ -183,7 +199,7 @@
                 </div>
 
                 <div class="package-card">
-                    <img src="public/images/pkg-grand.jpg" alt="Grand Australia" class="package-img">
+                    <img src="public/images/pkg-grand.jpg" alt="Grand Australia" class="package-img" loading="lazy">
                     <div class="package-content">
                         <span class="package-duration" data-i18n="packages.pkg5.duration">13 Days</span>
                         <h3 data-i18n="packages.pkg5.title">Grand Australia Highlights</h3>
@@ -197,7 +213,8 @@
                 </div>
 
                 <div class="package-card">
-                    <img src="public/images/pkg-queensland.jpg" alt="Queensland Explorer" class="package-img">
+                    <img src="public/images/pkg-queensland.jpg" alt="Queensland Explorer" class="package-img"
+                        loading="lazy">
                     <div class="package-content">
                         <span class="package-duration" data-i18n="packages.pkg6.duration">6 Days</span>
                         <h3 data-i18n="packages.pkg6.title">Queensland Explorer - Self Drive</h3>
@@ -212,20 +229,6 @@
         </div>
     </section>
 
-    <!-- Destinations Preview -->
-    <section class="destinations-preview" id="destinations">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="destinations.preview.title">Destinations We Cover</h2>
-                <p class="section-subtitle" data-i18n="destinations.preview.subtitle">Comprehensive on-ground handling
-                    across the continent</p>
-            </div>
-
-            <div class="destinations-grid">
-                <!-- Add other destinations here when available -->
-            </div>
-        </div>
-    </section>
 
 
 
@@ -301,7 +304,7 @@
                     <h3 class="footer-logo">
                         <a href="/index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo"
-                                class="footer-logo-img">
+                                class="footer-logo-img" loading="lazy">
                         </a>
                     </h3>
                     <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company.</p>

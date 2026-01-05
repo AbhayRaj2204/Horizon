@@ -4,282 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sydney - Horizon Tours</title>
+    <title>Brisbane - Horizon Tours</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/language-selector.css">
-    <style>
-        /* Detail Page Specific Styles */
-        body {
-            background: #fff;
-        }
-
-        .nav-menu a {
-            color: var(--primary-dark);
-        }
-
-        .navbar {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .detail-container {
-            max-width: 1200px;
-            margin: 120px auto 60px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .breadcrumb {
-            grid-column: 1 / -1;
-            margin-bottom: 20px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .breadcrumb a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        .breadcrumb span {
-            margin: 0 5px;
-        }
-
-        .activity-header {
-            grid-column: 1 / -1;
-            margin-bottom: 20px;
-        }
-
-        .activity-title {
-            font-family: "Playfair Display", serif;
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
-        }
-
-        .activity-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .stars {
-            color: #fbbf24;
-        }
-
-        .gallery-grid {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 10px;
-            height: 400px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .gallery-main {
-            height: 100%;
-        }
-
-        .gallery-side {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            height: 100%;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-img-half {
-            height: 50%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        /* Main Content */
-        .activity-info {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .features-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            background: #f9fafb;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 14px;
-        }
-
-        .feature-icon {
-            color: var(--accent-gold);
-            font-size: 18px;
-        }
-
-        .description p {
-            margin-bottom: 15px;
-            color: #444;
-            line-height: 1.8;
-        }
-
-        .highlights li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .highlights li::before {
-            content: "•";
-            color: var(--accent-gold);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        /* Booking Sidebar */
-        .booking-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 24px;
-            position: sticky;
-            top: 100px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        .badge-sell-out {
-            background: #fef2f2;
-            color: #ef4444;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .price-tag {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-        }
-
-        .price-tag span {
-            font-size: 14px;
-            color: #666;
-            font-weight: 400;
-        }
-
-        .booking-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-select {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            width: 100%;
-        }
-
-        .btn-check {
-            background: #0071eb;
-            /* Getyourguide blue style or adhere to brand? */
-            background: var(--accent-gold);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
-        }
-
-        .btn-check:hover {
-            background: var(--accent-dark-gold);
-        }
-
-        .benefits {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-size: 13px;
-            color: #555;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .benefit-icon {
-            color: #10b981;
-        }
-
-        /* Reviews */
-        .review-box {
-            border: 1px solid #e5e7eb;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .reviewer {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--accent-gold);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        @media (max-width: 900px) {
-            .detail-container {
-                grid-template-columns: 1fr;
-            }
-
-            .booking-card {
-                position: static;
-                margin-bottom: 40px;
-            }
-
-            .gallery-grid {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/detail-page.css">
 </head>
 
 <body>
@@ -299,26 +27,26 @@
             <a href="../../index.html" data-i18n="nav.home">Home</a> <span>/</span>
             <a href="#" data-i18n="nav.destinations">Destinations</a> <span>/</span>
             <a href="#" data-i18n="australia.title">Australia</a> <span>/</span>
-            Sydney
+            Brisbane
         </div>
 
         <div class="activity-header">
-            <h1 class="activity-title" data-i18n="australia.sydneyTitle">Sydney Opera House & Harbour Cruise</h1>
+            <h1 class="activity-title" data-i18n="australia.brisbaneTitle">Brisbane River Cruise & Koala Sanctuary</h1>
             <div class="activity-meta">
-                <span class="stars" data-i18n="australia.sydneyStars">★★★★★</span>
-                <span data-i18n="australia.sydneyReviews">4.8 (10,230 reviews)</span>
+                <span class="stars" data-i18n="australia.brisbaneStars">★★★★★</span>
+                <span data-i18n="australia.brisbaneReviews">4.7 (1,200 reviews)</span>
                 <span>•</span>
-                <span data-i18n="australia.sydneyLoc">Sydney Opera House</span>
+                <span data-i18n="australia.brisbaneLoc">Mirimar Cruises</span>
             </div>
         </div>
 
         <div class="gallery-grid">
             <div class="gallery-main">
-                <img src="../../public/images/gallery-1.jpg" alt="Main View" class="gallery-img">
+                <img src="../../public/images/brisbane-main.png" alt="Brisbane City View" class="gallery-img">
             </div>
             <div class="gallery-side">
-                <img src="../../public/images/gallery-2.jpg" alt="Side View 1" class="gallery-img-half">
-                <img src="../../public/images/gallery-3.jpg" alt="Side View 2" class="gallery-img-half">
+                <img src="../../public/images/gallery-1.jpg" alt="Gallery View 1" class="gallery-img-half">
+                <img src="../../public/images/pkg-highlights.jpg" alt="Gallery View 2" class="gallery-img-half">
             </div>
         </div>
 
@@ -343,7 +71,7 @@
                     <div class="feature-item">
                         <span class="feature-icon">⏱️</span>
                         <div>
-                            <strong data-i18n="dest.duration">Duration 4 hours</strong><br>
+                            <strong data-i18n="dest.duration">Duration 5 hours</strong><br>
                             <span data-i18n="dest.checkAvailability">Check availability for times</span>
                         </div>
                     </div>
@@ -351,22 +79,22 @@
                         <span class="feature-icon">👤</span>
                         <div>
                             <strong data-i18n="dest.liveGuide">Live tour guide</strong><br>
-                            <span data-i18n="dest.languages">English, Japanese</span>
+                            <span data-i18n="dest.languages">English</span>
                         </div>
                     </div>
                 </div>
 
-                <p style="margin-top: 20px;" data-i18n="australia.sydneyDesc">
-                    Step inside the iconic Sydney Opera House for a guided tour, then board a luxury vessel for a lunch
-                    cruise with stunning views of the Harbour Bridge.
+                <p style="margin-top: 20px;" data-i18n="australia.brisbaneDesc">
+                    Cruise along the Brisbane River to the famous Lone Pine Koala Sanctuary. Enjoy a scenic boat ride
+                    followed by an up-close encounter with Australia's most iconic wildlife.
                 </p>
 
                 <h3 data-i18n="dest.highlights">Experience Highlights</h3>
                 <ul class="highlights">
-                    <li data-i18n="australia.sydneyH1">Official guided tour of Opera House</li>
-                    <li data-i18n="australia.sydneyH2">2-hour premium lunch cruise</li>
-                    <li data-i18n="australia.sydneyH3">3-course a la carte dining</li>
-                    <li data-i18n="australia.sydneyH4">Unbeatable harbour views</li>
+                    <li data-i18n="australia.brisbaneH1">Scenic cruise on the Brisbane River</li>
+                    <li data-i18n="australia.brisbaneH2">Entry to Lone Pine Koala Sanctuary</li>
+                    <li data-i18n="australia.brisbaneH3">Hold a koala and hand-feed kangaroos</li>
+                    <li data-i18n="australia.brisbaneH4">Commentary about local history</li>
                 </ul>
             </div>
 
@@ -374,30 +102,27 @@
                 <h3 data-i18n="dest.reviews">Traveler Reviews</h3>
                 <div class="review-box">
                     <div class="reviewer">
-                        <div class="avatar">L</div>
+                        <div class="avatar">K</div>
                         <div>
-                            <strong>Lea - Germany</strong><br>
+                            <strong>Kate - Canada</strong><br>
                             <span style="font-size: 12px; color: #888;" data-i18n="dest.verified">Verified
                                 booking</span>
                         </div>
                         <div class="stars" style="margin-left: auto;">★★★★★</div>
                     </div>
-                    <p data-i18n="australia.sydneyReview1">"Absolutely fantastic experience! The views were breathtaking
-                        and the guide was so knowledgeable.
-                        Highly recommend this to anyone visiting Sydney."</p>
+                    <p>"The koalas were adorable and the river cruise was so relaxing. A great way to see Brisbane."</p>
                 </div>
                 <div class="review-box">
                     <div class="reviewer">
-                        <div class="avatar">M</div>
+                        <div class="avatar">T</div>
                         <div>
-                            <strong>Mike - USA</strong><br>
+                            <strong>Tom - USA</strong><br>
                             <span style="font-size: 12px; color: #888;" data-i18n="dest.verified">Verified
                                 booking</span>
                         </div>
-                        <div class="stars" style="margin-left: auto;">★★★★★</div>
+                        <div class="stars" style="margin-left: auto;">★★★★☆</div>
                     </div>
-                    <p data-i18n="australia.sydneyReview2">"Well organized and worth every penny. The highlight of our
-                        trip to Australia."</p>
+                    <p>"Lovely city and friendly guide. South Bank is a must-visit."</p>
                 </div>
             </div>
         </div>
@@ -407,7 +132,7 @@
             <div class="booking-card">
                 <span class="badge-sell-out" data-i18n="dest.likelySellOut">Likely to sell out</span>
                 <p style="margin-bottom: 5px; color: #666;" data-i18n="dest.from">From</p>
-                <div class="price-tag">A$175 <span data-i18n="dest.perPerson">per person</span></div>
+                <div class="price-tag">A$125 <span data-i18n="dest.perPerson">per person</span></div>
 
                 <form class="booking-form">
                     <div class="form-group">
@@ -425,7 +150,7 @@
                         </select>
                     </div>
                     <button type="button" class="btn-check" data-i18n="dest.checkBtn"
-                        onclick="alert('Checking availability for Sydney...')">Check availability</button>
+                        onclick="alert('Checking availability for Brisbane...')">Check availability</button>
                 </form>
 
                 <div class="benefits">
@@ -444,24 +169,6 @@
         </div>
 
     </div>
-
-    <!-- Trade Footer Support -->
-    <!-- <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 class="footer-logo">
-                        <a href="../../index.html">
-                            <img src="../../assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo"
-                                class="footer-logo-img">
-                        </a>
-                    </h3>
-                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company.</p>
-                </div>
-                
-            </div>
-        </div>
-    </footer> -->
 
     <script src="../../assets/js/script.js"></script>
 </body>

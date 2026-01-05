@@ -125,6 +125,14 @@ function setupNavbarLogic(relPath, initiallyScrolled) {
         navMenu.classList.toggle("active");
         hamburger.classList.toggle("active");
         backdrop.classList.toggle("active");
+        navbar.classList.toggle("menu-open");
+
+        // Toggle body scroll
+        if (navMenu.classList.contains("active")) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
     });
 
     // Close menu when clicking backdrop
@@ -132,6 +140,8 @@ function setupNavbarLogic(relPath, initiallyScrolled) {
         navMenu.classList.remove("active");
         hamburger.classList.remove("active");
         backdrop.classList.remove("active");
+        navbar.classList.remove("menu-open");
+        document.body.style.overflow = "";
     });
 
     // Mobile dropdown toggles - Destinations (Main dropdown)
@@ -177,6 +187,8 @@ function setupNavbarLogic(relPath, initiallyScrolled) {
                 navMenu.classList.remove('active');
                 hamburger.classList.remove('active');
                 backdrop.classList.remove('active');
+                navbar.classList.remove("menu-open");
+                document.body.style.overflow = "";
             }
         });
     });

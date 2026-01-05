@@ -4,309 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auckland - Horizon Tours</title>
+    <title>Christchurch - Horizon Tours</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="../../assets/css/language-selector.css">
-    <style>
-        /* Detail Page Specific Styles */
-        body {
-            background: #fff;
-        }
-
-        .nav-menu a {
-            color: var(--primary-dark);
-        }
-
-        .navbar {
-            background: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .detail-container {
-            max-width: 1200px;
-            margin: 120px auto 60px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .breadcrumb {
-            grid-column: 1 / -1;
-            margin-bottom: 20px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .breadcrumb a {
-            color: #666;
-            text-decoration: none;
-        }
-
-        .breadcrumb span {
-            margin: 0 5px;
-        }
-
-        .activity-header {
-            grid-column: 1 / -1;
-            margin-bottom: 20px;
-        }
-
-        .activity-title {
-            font-family: "Playfair Display", serif;
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
-        }
-
-        .activity-meta {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .stars {
-            color: #fbbf24;
-        }
-
-        .gallery-grid {
-            grid-column: 1 / -1;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 10px;
-            height: 400px;
-            margin-bottom: 40px;
-            border-radius: 12px;
-            overflow: hidden;
-        }
-
-        .gallery-main {
-            height: 100%;
-        }
-
-        .gallery-side {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            height: 100%;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-img-half {
-            height: 50%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .activity-info {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .features-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            background: #f9fafb;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 14px;
-        }
-
-        .feature-icon {
-            color: var(--accent-gold);
-            font-size: 18px;
-        }
-
-        .description p {
-            margin-bottom: 15px;
-            color: #444;
-            line-height: 1.8;
-        }
-
-        .highlights li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .highlights li::before {
-            content: "•";
-            color: var(--accent-gold);
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .booking-card {
-            background: #fff;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 24px;
-            position: sticky;
-            top: 100px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-        }
-
-        .badge-sell-out {
-            background: #fef2f2;
-            color: #ef4444;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .price-tag {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 20px;
-        }
-
-        .price-tag span {
-            font-size: 14px;
-            color: #666;
-            font-weight: 400;
-        }
-
-        .booking-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .form-select {
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            width: 100%;
-        }
-
-        .btn-check {
-            background: var(--accent-gold);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 25px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.3s;
-        }
-
-        .btn-check:hover {
-            background: var(--accent-dark-gold);
-        }
-
-        .benefits {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-size: 13px;
-            color: #555;
-        }
-
-        .benefit-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .benefit-icon {
-            color: #10b981;
-        }
-
-        .review-box {
-            border: 1px solid #e5e7eb;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-
-        .reviewer {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-        }
-
-        .avatar {
-            width: 40px;
-            height: 40px;
-            background: var(--accent-gold);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        @media (max-width: 900px) {
-            .detail-container {
-                grid-template-columns: 1fr;
-            }
-
-            .booking-card {
-                position: static;
-                margin-bottom: 40px;
-            }
-
-            .gallery-grid {
-                height: 300px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/detail-page.css">
 </head>
 
 <body>
     <div id="navbar-placeholder"></div>
     <script src="../../assets/js/navbar-init.js"></script>
     <script src="../../assets/js/translations.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', () => { initNavbar('../../', true); });</script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initNavbar('../../', true);
+        });
+    </script>
 
     <div class="detail-container">
+
         <div class="breadcrumb">
             <a href="../../index.html" data-i18n="nav.home">Home</a> <span>/</span>
             <a href="#" data-i18n="nav.destinations">Destinations</a> <span>/</span>
-            <a href="#" data-i18n="nz.title">New Zealand</a> <span>/</span>
-            Auckland
+            <a href="#" class="btn-check"
+                style="background:none; color:#666; padding:0; width:auto; border-radius:0;">New Zealand</a>
+            <span>/</span>
+            Christchurch
         </div>
 
         <div class="activity-header">
-            <h1 class="activity-title" data-i18n="nz.aucklandTitle">Waitomo Caves & Hobbiton Tour</h1>
+            <h1 class="activity-title" data-i18n="nz.christchurchTitle">Mount Cook & Lake Tekapo Tour</h1>
             <div class="activity-meta">
-                <span class="stars" data-i18n="nz.aucklandStars">★★★★★</span>
-                <span data-i18n="nz.aucklandReviews">4.9 (15,400 reviews)</span>
+                <span class="stars" data-i18n="nz.christchurchStars">★★★★★</span>
+                <span data-i18n="nz.christchurchReviews">4.8 (3,800 reviews)</span>
                 <span>•</span>
-                <span data-i18n="nz.aucklandLoc">Waitomo & Matamata</span>
+                <span data-i18n="nz.christchurchLoc">Christchurch CBD Pick-up</span>
             </div>
         </div>
 
         <div class="gallery-grid">
-            <div class="gallery-main"><img src="../../public/images/gallery-1.jpg" alt="Auckland" class="gallery-img">
+            <div class="gallery-main">
+                <img src="../../public/images/pkg-adventure.jpg" alt="Christchurch" class="gallery-img">
             </div>
             <div class="gallery-side">
-                <img src="../../public/images/gallery-2.jpg" alt="Auckland" class="gallery-img-half">
-                <img src="../../public/images/gallery-3.jpg" alt="Auckland" class="gallery-img-half">
+                <img src="../../public/images/pkg-highlights.jpg" alt="Gallery View 1" class="gallery-img-half">
+                <img src="../../public/images/gallery-3.jpg" alt="Gallery View 2" class="gallery-img-half">
             </div>
         </div>
 
@@ -314,22 +56,111 @@
             <div class="description">
                 <h2 data-i18n="dest.about">About this activity</h2>
                 <div class="features-list">
-                    <div class="feature-item"><span class="feature-icon">⏱️</span>
-                        <div><strong data-i18n="dest.duration">Duration 12 hours</strong></div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📅</span>
+                        <div>
+                            <strong data-i18n="dest.freeCancel">Free cancellation</strong><br>
+                            <span data-i18n="dest.cancelNote">Cancel up to 24 hours in advance</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💳</span>
+                        <div>
+                            <strong data-i18n="dest.reserveNow">Reserve now & pay later</strong><br>
+                            <span data-i18n="dest.flexible">Keep your travel plans flexible</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⏱️</span>
+                        <div>
+                            <strong data-i18n="dest.duration">Duration 3 hours</strong><br>
+                            <span data-i18n="dest.checkAvailability">Check availability for times</span>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👤</span>
+                        <div>
+                            <strong data-i18n="dest.liveGuide">Live tour guide</strong><br>
+                            <span data-i18n="dest.languages">English</span>
+                        </div>
                     </div>
                 </div>
-                <p style="margin-top: 20px;" data-i18n="nz.aucklandDesc">Magical glowworm caves and the Shire film set.
+
+                <p style="margin-top: 20px;" data-i18n="nz.christchurchDesc">
+                    Journey into the heart of the Southern Alps. Marvel at the turquoise waters of Lake Tekapo and stand
+                    at
+                    the foot of New Zealand's highest peak, Aoraki Mount Cook.
                 </p>
+
+                <h3 data-i18n="dest.highlights">Experience Highlights</h3>
+                <ul class="highlights">
+                    <li data-i18n="nz.christchurchH1">Visit Lake Tekapo and Church of Good Shepherd</li>
+                    <li data-i18n="nz.christchurchH2">Explore Aoraki Mount Cook National Park</li>
+                    <li data-i18n="nz.christchurchH3">Stunning alpine scenery throughout</li>
+                    <li data-i18n="nz.christchurchH4">Small-group tour experience</li>
+                </ul>
+            </div>
+
+            <div class="reviews-section">
+                <h3 data-i18n="dest.reviews">Traveler Reviews</h3>
+                <div class="review-box">
+                    <div class="reviewer">
+                        <div class="avatar">D</div>
+                        <div>
+                            <strong>David - Australia</strong><br>
+                            <span style="font-size: 12px; color: #888;" data-i18n="dest.verified">Verified
+                                booking</span>
+                        </div>
+                        <div class="stars" style="margin-left: auto;">★★★★☆</div>
+                    </div>
+                    <p>"Very relaxing day. Punting was the highlight."</p>
+                </div>
             </div>
         </div>
 
+        <!-- Right Sidebar -->
         <div class="booking-sidebar">
             <div class="booking-card">
-                <div class="price-tag">NZ$280 <span>per person</span></div>
-                <button type="button" class="btn-check">Check availability</button>
+                <span class="badge-sell-out" data-i18n="dest.likelySellOut">Likely to sell out</span>
+                <p style="margin-bottom: 5px; color: #666;" data-i18n="dest.from">From</p>
+                <div class="price-tag">A$85 <span data-i18n="dest.perPerson">per person</span></div>
+
+                <form class="booking-form">
+                    <div class="form-group">
+                        <select class="form-select">
+                            <option>Adult x 1</option>
+                            <option>Adult x 2</option>
+                            <option>Family (2A + 2C)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select">
+                            <option>Select date</option>
+                            <option>Tomorrow</option>
+                            <option>Next Week</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn-check" data-i18n="dest.checkBtn"
+                        onclick="alert('Checking availability for Christchurch...')">Check availability</button>
+                </form>
+
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span> <span data-i18n="dest.freeCancel">Free cancellation</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span> <span data-i18n="dest.instant">Instant confirmation</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">✓</span> <span data-i18n="dest.voucher">Printed or mobile
+                            voucher</span>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
+
     <script src="../../assets/js/script.js"></script>
 </body>
 

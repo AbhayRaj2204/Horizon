@@ -94,11 +94,13 @@
 }
 
 body.loading {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {

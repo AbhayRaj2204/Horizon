@@ -1,6 +1,8 @@
 // Loader Management
-document.body.classList.add("loading")
 const loader = document.getElementById("loader")
+if (loader) {
+  document.body.classList.add("loading")
+}
 const loaderBar = document.querySelector(".loader-bar")
 
 let progress = 0
@@ -19,10 +21,10 @@ const hideLoader = () => {
   setTimeout(() => {
     if (loader) {
       loader.classList.add("loader-hidden")
-      document.body.classList.remove("loading")
-      const hero = document.querySelector(".hero")
-      if (hero) hero.classList.add("loaded")
     }
+    document.body.classList.remove("loading")
+    const hero = document.querySelector(".hero")
+    if (hero) hero.classList.add("loaded")
   }, 500)
 }
 

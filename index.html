@@ -26,7 +26,7 @@
     <!-- Navigation -->
     <div id="navbar-placeholder"></div>
     <script src="assets/js/navbar-init.js"></script>
-    <script src="assets/js/translations.js"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initNavbar('', false); // Path, Not scrolled
@@ -46,17 +46,23 @@
             <p class="hero-subtitle" data-i18n="b2b.hero.subtitle">Exclusively for travel agents. Net rates, white-label
                 itineraries, and 24/7
                 on-ground support.</p>
-            <div style="display: flex; gap: 20px; justify-content: center;">
-                <a href="partner-register.html" class="hero-btn" data-i18n="b2b.hero.requestRates">REQUEST RATES</a>
-                <a href="agent/portal.html" class="hero-btn" style="background: transparent; border: 2px solid white;"
-                    data-i18n="b2b.hero.accessPortal">ACCESS
-                    PORTAL</a>
-            </div>
         </div>
         <div class="scroll-indicator">
             <div class="mouse"></div>
         </div>
     </section>
+
+    <!-- Hero CTA Bar -->
+    <div class="hero-cta-bar">
+        <div class="container">
+            <div class="cta-bar-flex">
+                <a href="contact.html" class="hero-btn-alt" data-i18n="b2b.hero.requestRates">REQUEST RATES</a>
+                <span class="cta-divider"></span>
+                <a href="agent/portal.html" class="hero-btn-alt outline" data-i18n="b2b.hero.accessPortal">AGENT
+                    PORTAL</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Why Choose Us (B2B Value Prop) -->
     <section class="services" id="why-partner">
@@ -291,61 +297,73 @@
         <div class="container">
             <h2 data-i18n="cta.growSales">Ready to Grow Your Sales?</h2>
             <p data-i18n="cta.registerText">Register today to access net rates and our booking engine.</p>
-            <a href="partner-register.html" class="cta-primary-btn" data-i18n="cta.registerBtn"
-                style="text-decoration: none; display: inline-block; margin-top: 20px;">REGISTER AS PARTNER</a>
+            <a href="contact.html" class="cta-primary-btn" data-i18n="cta.registerBtn"
+                style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; margin-top: 20px;">REGISTER
+                AS PARTNER</a>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h3 class="footer-logo">
-                        <a href="/index.html">
+                    <div class="footer-logo">
+                        <a href="index.html">
                             <img src="assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon Logo"
                                 class="footer-logo-img" loading="lazy">
                         </a>
-                    </h3>
-                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company.</p>
+                    </div>
+                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New
+                        Zealand.</p>
                 </div>
 
                 <div class="footer-col">
                     <h4 data-i18n="footer.quickLinks">Quick Links</h4>
                     <ul>
-                        <li><a href="agent/portal.html" data-i18n="b2b.nav.agentPortal">Agent Portal</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                         <li><a href="partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a></li>
-                        <li><a href="#destinations" data-i18n="nav.destinations">Destinations</a></li>
-                        <li><a href="#why-partner" data-i18n="nav.services">Why Partner</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4 data-i18n="footer.tradeSupport">Trade Support</h4>
+                    <h4 data-i18n="nav.destinations">Destinations</h4>
                     <ul>
-                        <li><a href="#about" data-i18n="footer.about">About Us</a></li>
-                        <li><a href="/contact.html" data-i18n="nav.contact">Contact Ops</a></li>
-                        <li><a href="services.html#reviews" data-i18n="nav.reviews">Client Reviews</a></li>
-                        <li><a href="#" data-i18n="footer.agentTerms">Agent Terms (NDA)</a></li>
-                        <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+                        <li><a href="destinations/australia/sydney.html">Sydney, AU</a></li>
+                        <li><a href="destinations/australia/melbourne.html">Melbourne, AU</a></li>
+                        <li><a href="destinations/australia/brisbane.html">Brisbane, AU</a></li>
+                        <li><a href="destinations/australia/cairns.html">Cairns, AU</a></li>
+                        <li><a href="destinations/new-zealand/auckland.html">Auckland, NZ</a></li>
+                        <li><a href="destinations/new-zealand/christchurch.html">Christchurch, NZ</a></li>
                     </ul>
                 </div>
 
-                <div class="footer-col">
+                <div class="footer-col" id="contact-info">
                     <h4 data-i18n="footer.contactHQ">Contact HQ</h4>
-                    <p data-i18n="footer.emailTrade">Email: agents@horizontours.com</p>
-                    <p data-i18n="footer.phoneTrade">Phone: +61 2 8000 9999 (SYD)</p>
+                    <p style="margin-bottom: 5px;"><b>Australia:</b> +61 438 861 835</p>
+                    <p style="margin-bottom: 5px;"><b>India:</b> +91 9004339734 / +91 8108103903</p>
+                    <p style="margin-bottom: 15px;">hello@horizontoursandtravels.com.au</p>
+
+                    <h4 style="font-size: 14px; margin-bottom: 10px;">Our Offices</h4>
+                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St,
+                        Woolloongabba, QLD 4102</p>
+                    <p style="font-size: 12px; opacity: 0.8;"><b>Gujarat:</b> Dhrashanvel, Devbhoomi Dwarka (India)</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only.</p>
+                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687
+                    136 303</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/translations.js"></script>
+
+
     <script>
         // Language selector toggle
         document.querySelectorAll('.lang-selector button').forEach(btn => {
@@ -355,6 +373,9 @@
             });
         });
     </script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/translations.js"></script>
 </body>
 
 </html>

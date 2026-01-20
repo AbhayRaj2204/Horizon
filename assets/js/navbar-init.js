@@ -9,12 +9,13 @@ function initNavbar(relPath = "", isScrolled = false) {
         <div class="nav-container">
             <div class="logo-wrapper">
                 <a href="${relPath}index.html">
-                    <img src="${relPath}assets/images/Horizon-Tours-Travels-White.svg" alt="Horizon DMC" class="logo-img" id="nav-logo">
+                    <img src="${relPath}assets/images/logo.png" alt="Horizon DMC" class="logo-img" id="nav-logo">
                 </a>
             </div>
             
             <ul class="nav-menu">
                 <li><a href="${relPath}index.html" data-i18n="nav.home">Home</a></li>
+                <li><a href="${relPath}about.html" data-i18n="nav.about">About Us</a></li>
                 <li class="nav-item-dropdown">
                     <a href="#destinations" data-i18n="nav.destinations">Destinations ▾</a>
                     <ul class="dropdown-menu">
@@ -50,10 +51,10 @@ function initNavbar(relPath = "", isScrolled = false) {
                         <button data-lang="en" class="active">EN</button>
                         <button data-lang="ja">日本語</button>
                     </div>
-                    <div class="mobile-cta-buttons">
+                    <!-- <div class="mobile-cta-buttons">
                         <a href="${relPath}agent/portal.html" class="mobile-cta-btn secondary" data-i18n="b2b.nav.agentPortal">AGENT PORTAL</a>
                         <a href="${relPath}partner-register.html" class="mobile-cta-btn primary" data-i18n="b2b.nav.becomePartner">BECOME A PARTNER</a>
-                    </div>
+                    </div> -->
                 </li>
             </ul>
 
@@ -62,10 +63,10 @@ function initNavbar(relPath = "", isScrolled = false) {
                     <button data-lang="en">EN</button>
                     <button data-lang="ja">日本語</button>
                 </div>
-                <div class="nav-btns">
+                <!-- <div class="nav-btns">
                     <a href="${relPath}agent/portal.html" class="nav-portal-link" data-i18n="b2b.nav.agentPortal">AGENT PORTAL</a>
                     <a href="${relPath}partner-register.html" class="cta-btn" data-i18n="b2b.nav.becomePartner">BECOME A PARTNER</a>
-                </div>
+                </div> -->
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -83,18 +84,6 @@ function initNavbar(relPath = "", isScrolled = false) {
         placeholder.innerHTML = navbarHTML;
     } else {
         document.body.insertAdjacentHTML('afterbegin', navbarHTML);
-    }
-
-    // Add filter for logo when navbar is scrolled (since we only have white version)
-    if (!document.getElementById('navbar-logo-filter')) {
-        const style = document.createElement('style');
-        style.id = 'navbar-logo-filter';
-        style.textContent = `
-            .navbar.scrolled #nav-logo {
-                filter: brightness(0);
-            }
-        `;
-        document.head.appendChild(style);
     }
 
     // Attach functionality

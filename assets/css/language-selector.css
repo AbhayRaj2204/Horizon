@@ -15,15 +15,36 @@
   font-weight: 500;
 }
 
+@media (min-width: 769px) {
+  .lang-selector button {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 .lang-selector button:hover {
   border-color: rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, 1);
 }
 
+.navbar.scrolled .lang-selector button:not(.active) {
+  color: #000000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled .lang-selector button:not(.active):hover {
+  border-color: #000000;
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .lang-selector button.active {
-  background: rgba(244, 162, 97, 0.3);
-  border-color: #f4a261;
-  color: #f4a261;
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: #fff;
 }
 
 /* Default hidden, shown via helper classes */

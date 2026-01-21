@@ -1,21 +1,13 @@
 // Loader Management
 const loader = document.getElementById("loader")
+const loaderBar = document.querySelector(".loader-bar")
+const loaderText = document.querySelector(".loader-text")
+
 if (loader) {
   document.body.classList.add("loading")
 }
-const loaderBar = document.querySelector(".loader-bar")
-
-let progress = 0
-const progressInterval = setInterval(() => {
-  if (progress < 90) {
-    progress += Math.random() * 15
-    if (progress > 90) progress = 90
-    if (loaderBar) loaderBar.style.width = `${progress}%`
-  }
-}, 100)
 
 const hideLoader = () => {
-  clearInterval(progressInterval)
   if (loaderBar) loaderBar.style.width = "100%"
 
   setTimeout(() => {
@@ -28,21 +20,89 @@ const hideLoader = () => {
   }, 500)
 }
 
-// Check for hero loading
-const heroVideo = document.querySelector(".hero-video")
-if (heroVideo) {
-  if (heroVideo.readyState >= 3) {
-    hideLoader()
-  } else {
-    heroVideo.addEventListener("canplaythrough", hideLoader, { once: true })
-    // Fallback if video takes too long
-    setTimeout(hideLoader, 3000)
+// Asset Preloading Logic
+const preloadAssets = () => {
+  const images = Array.from(document.querySelectorAll("img"))
+  const videos = Array.from(document.querySelectorAll("video"))
+
+  // Find background images on all elements
+  const bgImages = []
+  const allElements = document.getElementsByTagName("*")
+  for (let i = 0; i < allElements.length; i++) {
+    const bg = window.getComputedStyle(allElements[i]).backgroundImage
+    if (bg && bg !== "none" && bg.includes("url")) {
+      const urlMatches = bg.match(/url\(["']?([^"']+)["']?\)/)
+      if (urlMatches && urlMatches[1]) {
+        bgImages.push(urlMatches[1])
+      }
+    }
   }
-} else {
-  window.addEventListener("load", hideLoader)
-  // Fallback
-  setTimeout(hideLoader, 2000)
+
+  const totalAssets = images.length + videos.length + bgImages.length
+  let loadedAssets = 0
+
+  if (totalAssets === 0) {
+    hideLoader()
+    return
+  }
+
+  const updateProgress = () => {
+    loadedAssets++
+    const progress = (loadedAssets / totalAssets) * 100
+    if (loaderBar) loaderBar.style.width = `${progress}%`
+
+    if (loadedAssets === totalAssets) {
+      setTimeout(hideLoader, 500)
+    }
+  }
+
+  // Preload Images
+  images.forEach((img) => {
+    if (img.complete) {
+      updateProgress()
+    } else {
+      img.addEventListener("load", updateProgress)
+      img.addEventListener("error", updateProgress)
+    }
+
+    if (img.getAttribute("loading") === "lazy") {
+      img.removeAttribute("loading")
+    }
+  })
+
+  // Preload Background Images
+  bgImages.forEach((url) => {
+    const img = new Image()
+    img.src = url
+    img.onload = updateProgress
+    img.onerror = updateProgress
+  })
+
+  // Preload Videos
+  videos.forEach((video) => {
+    if (video.readyState >= 3) {
+      updateProgress()
+    } else {
+      video.addEventListener("canplaythrough", updateProgress, { once: true })
+      video.addEventListener("error", updateProgress)
+    }
+  })
+
+  // Fallback: Max 8 seconds for slower connections
+  setTimeout(() => {
+    if (loadedAssets < totalAssets) {
+      console.warn("Preloader timed out.")
+      hideLoader()
+    }
+  }, 8000)
 }
+
+// Initialize preloader
+window.addEventListener("DOMContentLoaded", () => {
+  // We start preloading after DOM is ready so we can find all elements
+  preloadAssets()
+})
+
 
 // Navbar scroll effect
 const navbar = document.querySelector(".navbar")

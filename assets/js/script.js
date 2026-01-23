@@ -80,21 +80,27 @@ const preloadAssets = () => {
 
   // Preload Videos
   videos.forEach((video) => {
+    // Basic preloading check
     if (video.readyState >= 3) {
       updateProgress()
     } else {
-      video.addEventListener("canplaythrough", updateProgress, { once: true })
-      video.addEventListener("error", updateProgress)
+      // For hero video, we want it to be very ready
+      const onCanPlay = () => {
+        updateProgress()
+        video.removeEventListener("canplaythrough", onCanPlay)
+      }
+      video.addEventListener("canplaythrough", onCanPlay)
+      video.addEventListener("error", updateProgress, { once: true })
     }
   })
 
-  // Fallback: Max 8 seconds for slower connections
+  // Fallback: Max 15 seconds for slower connections
   setTimeout(() => {
     if (loadedAssets < totalAssets) {
-      console.warn("Preloader timed out.")
+      console.warn("Preloader timed out. Assets loaded:", loadedAssets, "of", totalAssets)
       hideLoader()
     }
-  }, 8000)
+  }, 15000)
 }
 
 // Initialize preloader
@@ -104,32 +110,8 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Navbar scroll effect
-const navbar = document.querySelector(".navbar")
-const hamburger = document.querySelector(".hamburger")
-const navMenu = document.querySelector(".nav-menu")
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    navbar.classList.add("scrolled")
-  } else {
-    navbar.classList.remove("scrolled")
-  }
-})
-
-// Mobile menu toggle
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active")
-  hamburger.classList.toggle("active")
-})
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll(".nav-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("active")
-    hamburger.classList.remove("active")
-  })
-})
+// Mobile menu toggle logic is handled in navbar-init.js
+// Removing redundant listeners from script.js to avoid console errors
 
 // Smooth scroll for all links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

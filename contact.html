@@ -25,7 +25,7 @@
 
     <!-- Navigation -->
     <script src="assets/js/navbar-init.js"></script>
-    
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -68,7 +68,11 @@
                                 data-i18n="contact.phone">
                         </div>
                         <div class="form-group">
-                            <select required>
+                            <input type="text" id="form-tour-name" placeholder="Selected Tour" readonly
+                                style="background: #f1f5f9; cursor: not-allowed;">
+                        </div>
+                        <div class="form-group">
+                            <select id="form-tour-type" required>
                                 <option value="">Select Tour Type</option>
                                 <option value="luxury" data-i18n="contact.luxury">Luxury Tour</option>
                                 <option value="adventure" data-i18n="contact.adventureOpt">Adventure Tour</option>
@@ -76,6 +80,19 @@
                                 <option value="cultural" data-i18n="contact.culturalOpt">Cultural Tour</option>
                                 <option value="honeymoon" data-i18n="contact.honeymoonOpt">Honeymoon</option>
                             </select>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 12px; color: #64748b; margin-bottom: 5px; display: block;">Travel
+                                    Date</label>
+                                <input type="date" id="form-date">
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="font-size: 12px; color: #64748b; margin-bottom: 5px; display: block;">Guests</label>
+                                <input type="number" id="form-guests" min="1" max="50">
+                            </div>
                         </div>
                         <div class="form-group">
                             <textarea placeholder="Tell us about your dream trip..." data-i18n-attr="placeholder"
@@ -186,7 +203,7 @@
         </div>
     </section>
 
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -198,7 +215,8 @@
                                 class="footer-logo-img" loading="lazy">
                         </a>
                     </div>
-                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New Zealand.</p>
+                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New
+                        Zealand.</p>
                 </div>
 
                 <div class="footer-col">
@@ -231,13 +249,15 @@
                     <p style="margin-bottom: 15px;">hello@horizontoursandtravels.com.au</p>
 
                     <h4 style="font-size: 14px; margin-bottom: 10px;">Our Offices</h4>
-                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St, Woolloongabba, QLD 4102</p>
+                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St,
+                        Woolloongabba, QLD 4102</p>
                     <p style="font-size: 12px; opacity: 0.8;"><b>Gujarat:</b> Dhrashanvel, Devbhoomi Dwarka (India)</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687 136 303</p>
+                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687
+                    136 303</p>
             </div>
         </div>
     </footer>
@@ -253,10 +273,33 @@
             });
         });
     </script>
-    
+
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/translations.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Parse URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const tour = urlParams.get('tour');
+            const date = urlParams.get('date');
+            const guests = urlParams.get('guests');
+
+            // Fill form fields if parameters exist
+            if (tour) {
+                document.getElementById('form-tour-name').value = decodeURIComponent(tour);
+
+                // Auto-select tour type based on name keywords (optional but helpful)
+                const tourTypeSelect = document.getElementById('form-tour-type');
+                const tourLower = tour.toLowerCase();
+                if (tourLower.includes('adventure')) tourTypeSelect.value = 'adventure';
+                else if (tourLower.includes('highlights')) tourTypeSelect.value = 'luxury';
+                else if (tourLower.includes('escape')) tourTypeSelect.value = 'family';
+            }
+            if (date) document.getElementById('form-date').value = date;
+            if (guests) document.getElementById('form-guests').value = guests;
+        });
+    </script>
 </body>
 
 </html>

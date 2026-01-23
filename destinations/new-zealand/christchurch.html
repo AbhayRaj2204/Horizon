@@ -13,7 +13,7 @@
 <body>
     <div id="navbar-placeholder"></div>
     <script src="../../assets/js/navbar-init.js"></script>
-    
+
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -118,50 +118,60 @@
             </div>
         </div>
 
-        <!-- Right Sidebar -->
         <div class="booking-sidebar">
-            <div class="booking-card">
-                <span class="badge-sell-out" data-i18n="dest.likelySellOut">Likely to sell out</span>
-                <p style="margin-bottom: 5px; color: #666;" data-i18n="dest.from">From</p>
-                <div class="price-tag">A$85 <span data-i18n="dest.perPerson">per person</span></div>
+            <div class="booking-widget">
+                <div class="sell-out-badge" data-i18n="package.likelySellOut">Likely to sell out</div>
+                <div class="widget-price-label" data-i18n="package.from">From</div>
+                <div class="widget-price-value">A$85 <span>per person</span></div>
 
                 <form class="booking-form">
-                    <div class="form-group">
-                        <select class="form-select">
-                            <option>Adult x 1</option>
-                            <option>Adult x 2</option>
-                            <option>Family (2A + 2C)</option>
+                    <div class="booking-field">
+                        <select id="guest-count">
+                            <option value="1">Adult x 1</option>
+                            <option value="2">Adult x 2</option>
+                            <option value="3">Adult x 3</option>
+                            <option value="4">Adult x 4</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <select class="form-select">
-                            <option>Select date</option>
-                            <option>Tomorrow</option>
-                            <option>Next Week</option>
-                        </select>
+
+                    <div class="booking-field">
+                        <input type="date" id="tour-date" placeholder="Select date">
                     </div>
-                    <button type="button" class="btn-check" data-i18n="dest.checkBtn"
-                        onclick="alert('Checking availability for Christchurch...')">Check availability</button>
+
+                    <button type="button" class="btn-check-availability" data-i18n="package.checkAvailability">Check
+                        availability</button>
+                    <div class="booking-success-msg"></div>
                 </form>
 
-                <div class="benefits">
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✓</span> <span data-i18n="dest.freeCancel">Free cancellation</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✓</span> <span data-i18n="dest.instant">Instant confirmation</span>
-                    </div>
-                    <div class="benefit-item">
-                        <span class="benefit-icon">✓</span> <span data-i18n="dest.voucher">Printed or mobile
-                            voucher</span>
-                    </div>
-                </div>
+                <ul class="widget-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-i18n="package.freeCancellation">Free cancellation</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-i18n="package.instantConfirmation">Instant confirmation</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-i18n="package.mobileVoucher">Printed or mobile voucher</span>
+                    </li>
+                </ul>
             </div>
         </div>
 
     </div>
 
-    
+
 
     <!-- Footer -->
     <footer class="footer">
@@ -174,7 +184,8 @@
                                 class="footer-logo-img" loading="lazy">
                         </a>
                     </div>
-                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New Zealand.</p>
+                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New
+                        Zealand.</p>
                 </div>
 
                 <div class="footer-col">
@@ -184,7 +195,8 @@
                         <li><a href="../../about.html" data-i18n="nav.about">About Us</a></li>
                         <li><a href="../../services.html" data-i18n="nav.services">Services</a></li>
                         <li><a href="../../contact.html" data-i18n="nav.contact">Contact</a></li>
-                        <li><a href="../../partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a></li>
+                        <li><a href="../../partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -207,18 +219,21 @@
                     <p style="margin-bottom: 15px;">hello@horizontoursandtravels.com.au</p>
 
                     <h4 style="font-size: 14px; margin-bottom: 10px;">Our Offices</h4>
-                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St, Woolloongabba, QLD 4102</p>
+                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St,
+                        Woolloongabba, QLD 4102</p>
                     <p style="font-size: 12px; opacity: 0.8;"><b>Gujarat:</b> Dhrashanvel, Devbhoomi Dwarka (India)</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687 136 303</p>
+                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687
+                    136 303</p>
             </div>
         </div>
     </footer>
 
     <script src="../../assets/js/script.js"></script>
+    <script src="../../assets/js/booking.js"></script>
     <script src="../../assets/js/translations.js"></script>
 </body>
 

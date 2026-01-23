@@ -156,7 +156,7 @@
 
     <div id="navbar-placeholder"></div>
     <script src="../assets/js/navbar-init.js"></script>
-    
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             initNavbar('../', true);
@@ -313,27 +313,58 @@
         </div>
 
         <div class="sidebar-info">
-            <div class="sidebar-card">
-                <h3 data-i18n="package.details">Package Details</h3>
-                <ul style="list-style: none; padding: 0; margin: 20px 0;">
-                    <li style="margin-bottom: 15px;"><strong data-i18n="package.duration">Duration:</strong> <span
-                            data-i18n="packages.pkg5.duration">13 Days</span></li>
-                    <li style="margin-bottom: 15px;"><strong data-i18n="package.destinations">Destinations:</strong>
-                        <span data-i18n="packages.pkg5.destinations">Melbourne | Cairns | Gold Coast |
-                            Sydney</span>
+            <div class="booking-widget">
+                <div class="sell-out-badge" data-i18n="package.likelySellOut">Likely to sell out</div>
+                <div class="widget-price-label" data-i18n="package.from">From</div>
+                <div class="widget-price-value">A$175 <span>per person</span></div>
+
+                <form class="booking-form">
+                    <div class="booking-field">
+                        <select id="guest-count">
+                            <option value="1">Adult x 1</option>
+                            <option value="2">Adult x 2</option>
+                            <option value="3">Adult x 3</option>
+                            <option value="4">Adult x 4</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-field">
+                        <input type="date" id="tour-date" placeholder="Select date">
+                    </div>
+
+                    <button type="button" class="btn-check-availability" data-i18n="package.checkAvailability">Check
+                        availability</button>
+                    <div class="booking-success-msg"></div>
+                </form>
+
+                <ul class="widget-features">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-i18n="package.freeCancellation">Free cancellation</span>
                     </li>
-                    <li style="margin-bottom: 15px;"><strong data-i18n="package.type">Type:</strong> B2B Inbound Package
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-i18n="package.instantConfirmation">Instant confirmation</span>
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-i18n="package.mobileVoucher">Printed or mobile voucher</span>
                     </li>
                 </ul>
-                <p style="font-size: 14px; color: #666;" data-i18n="package.sampleNote">This is a sample itinerary
-                    designed for agents. Rates are
-                    available upon request through the Agent Portal.</p>
-                <!-- <a href="../agent/portal.html" class="btn-inquiry" data-i18n="package.inquireNow">INQUIRE NOW</a> -->
             </div>
         </div>
     </div>
 
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -345,7 +376,8 @@
                                 class="footer-logo-img" loading="lazy">
                         </a>
                     </div>
-                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New Zealand.</p>
+                    <p data-i18n="footer.b2bDesc">Professional B2B Destination Management Company for Australia & New
+                        Zealand.</p>
                 </div>
 
                 <div class="footer-col">
@@ -355,7 +387,8 @@
                         <li><a href="../about.html" data-i18n="nav.about">About Us</a></li>
                         <li><a href="../services.html" data-i18n="nav.services">Services</a></li>
                         <li><a href="../contact.html" data-i18n="nav.contact">Contact</a></li>
-                        <li><a href="../partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a></li>
+                        <li><a href="../partner-register.html" data-i18n="b2b.nav.becomePartner">Become a Partner</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -378,20 +411,23 @@
                     <p style="margin-bottom: 15px;">hello@horizontoursandtravels.com.au</p>
 
                     <h4 style="font-size: 14px; margin-bottom: 10px;">Our Offices</h4>
-                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St, Woolloongabba, QLD 4102</p>
+                    <p style="font-size: 12px; margin-bottom: 5px; opacity: 0.8;"><b>Brisbane:</b> 208/70 Carl St,
+                        Woolloongabba, QLD 4102</p>
                     <p style="font-size: 12px; opacity: 0.8;"><b>Gujarat:</b> Dhrashanvel, Devbhoomi Dwarka (India)</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687 136 303</p>
+                <p data-i18n="footer.copyrightTrade">&copy; 2025 Horizon DMC. Trade Only. | ABN: 37687136303 | ACN: 687
+                    136 303</p>
             </div>
         </div>
     </footer>
 
-    
+
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/booking.js"></script>
     <script src="../assets/js/translations.js"></script>
 </body>
 

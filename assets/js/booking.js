@@ -1,6 +1,6 @@
 /**
  * Booking Widget Logic
- * Handles the 'Check availability' interaction and simulated booking flow.
+ * Handles the 'Get Quote' interaction and simulated booking flow.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Simulate API call
             setTimeout(() => {
                 checkAvailabilityBtn.classList.remove('loading');
-                checkAvailabilityBtn.innerHTML = 'Check availability';
+                checkAvailabilityBtn.innerHTML = 'Get Quote';
                 checkAvailabilityBtn.disabled = false;
 
                 // Show success message

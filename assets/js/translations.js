@@ -39,7 +39,7 @@ const translations = {
     "destinations.preview.title": "Destinations We Cover",
     "destinations.preview.subtitle": "Comprehensive on-ground handling across the continent",
     "destinations.australia.cities": "Sydney, Melbourne, Gold Coast, Cairns, Uluru",
-    "destinations.newzealand.cities": "Auckland, Queenstown, Rotorua, Christchurch",
+    "destinations.newzealand.cities": "Auckland, Queenstown, Rotorua, Christchurch, Wellington",
 
     // Featured Destinations Section
     "destinations.featured": "Featured Destinations",
@@ -349,6 +349,11 @@ const translations = {
     "australia.whitsundaysH4": "Modern high-speed catamaran travel",
     "australia.whitsundaysReview1": "\"Whitehaven is paradise. The water is so blue it doesn't look real!\"",
     "australia.whitsundaysReview2": "\"Well-organized day trip. Hamilton Island has great facilities.\"",
+
+    "australia.whitsundaysRev1Author": "James - UK",
+    "australia.whitsundaysRev1Text": "\"One of the best days of my life. Whitehaven Beach is even more beautiful in person!\"",
+    "australia.whitsundaysRev2Author": "Sarah - Australia",
+    "australia.whitsundaysRev2Text": "\"The crew was amazing and the snorkeling was incredible. Highly recommended.\"",
 
     // New Zealand Destination Details
     "nz.aucklandTitle": "Waitomo Caves & Hobbiton Tour",
@@ -1192,8 +1197,38 @@ const translations = {
     "footer.tasmaniaAU": "Tasmania, AU",
     "footer.whitsundaysAU": "Whitsundays, AU",
     "footer.rotoruaNZ": "Rotorua, NZ",
+    "footer.queenstownNZ": "Queenstown, NZ",
+    "footer.wellingtonNZ": "Wellington, NZ",
     "nz.rotoruaRev1Author": "Tani - NZ",
     "nz.rotoruaRev1Text": "\"A deeply moving cultural experience. The Hangi food was delicious!\"",
+
+    "nz.queenstownTitle": "Queenstown Skyline & Luge",
+    "nz.queenstownStars": "★★★★★",
+    "nz.queenstownReviews": "4.9 (8,200 reviews)",
+    "nz.queenstownLoc": "Skyline Queenstown",
+    "nz.queenstownDesc": "Experience the best views in Queenstown with a scenic gondola ride and thrilling luge tracks. Enjoy breathtaking panoramas of Lake Wakatipu and the Remarkables range.",
+    "nz.queenstownH1": "Scenic Gondola ride with 220-degree views",
+    "nz.queenstownH2": "Thrilling Luge tracks for all ages",
+    "nz.queenstownH3": "Stunning views of Lake Wakatipu and The Remarkables",
+    "nz.queenstownH4": "Guided stargazing at Bob's Peak",
+    "nz.queenstownRev1Author": "Tani - NZ",
+    "nz.queenstownReview1": "\"Best view in the country! The luge is so much fun for the kids.\"",
+    "nz.queenstownRev2Author": "James - USA",
+    "nz.queenstownReview2": "\"Skyline is a must-do in Queenstown. The sunset view is incredible.\"",
+
+    "nz.wellingtonTitle": "Te Papa Museum & Cable Car Tour",
+    "nz.wellingtonStars": "★★★★★",
+    "nz.wellingtonReviews": "4.8 (12,500 reviews)",
+    "nz.wellingtonLoc": "Museum of New Zealand Te Papa Tongarewa",
+    "nz.wellingtonDesc": "Explore the rich history and culture of New Zealand at Te Papa Museum, followed by a scenic ride on the iconic Wellington Cable Car for panoramic city views.",
+    "nz.wellingtonH1": "Interactive exhibits at Te Papa Museum",
+    "nz.wellingtonH2": "Iconic Wellington Cable Car ride",
+    "nz.wellingtonH3": "Panoramic views of Wellington Harbour",
+    "nz.wellingtonH4": "Visit the Carter Observatory and Botanic Garden",
+    "nz.wellingtonRev1Author": "Emma - UK",
+    "nz.wellingtonReview1": "\"Te Papa is the best museum I've ever visited. So informative and engaging.\"",
+    "nz.wellingtonRev2Author": "Hans - NL",
+    "nz.wellingtonReview2": "\"The Cable Car gives you the best perspective of the city. A great afternoon out.\"",
   },
 
   ja: {
@@ -1235,7 +1270,7 @@ const translations = {
     "destinations.preview.title": "私たちがカバーする目的地",
     "destinations.preview.subtitle": "大陸全土にわたる包括的な現地地上手配",
     "destinations.australia.cities": "シドニー、メルボルン、ゴールドコースト、ケアンズ、ウルル",
-    "destinations.newzealand.cities": "オークランド、クィーンズタウン、ロトルア、クライストチャーチ",
+    "destinations.newzealand.cities": "オークランド, クイーンズタウン, ロトルア, クライストチャーチ, ウェリントン",
 
     // Featured Destinations Section
     "destinations.featured": "厳選された目的地",
@@ -1407,6 +1442,8 @@ const translations = {
     "footer.tasmaniaAU": "タスマニア, AU",
     "footer.whitsundaysAU": "ウィットサンデー諸島, AU",
     "footer.rotoruaNZ": "ロトルア, NZ",
+    "footer.queenstownNZ": "クイーンズタウン, NZ",
+    "footer.wellingtonNZ": "ウェリントン, NZ",
 
     // Package Detail Commons
     "package.itinerary": "ツアー日程",
@@ -1513,6 +1550,10 @@ const translations = {
     "australia.melbourneH2": "熱帯雨林のガイド付きウォーク",
     "australia.melbourneH3": "パーソナライズされた体験が楽しめる小グループ",
     "australia.melbourneH4": "素晴らしい海岸絶景のフォトスポット",
+    "australia.melbourneRev1Author": "ポール - アイルランド",
+    "australia.melbourneRev1Text": "\"グレート・オーシャン・ロードは必見です。長い一日でしたが、それだけの価値はあります。\"",
+    "australia.melbourneRev2Author": "エミリー - カナダ",
+    "australia.melbourneRev2Text": "\"メルボルンの路地裏ツアーが大好きでした。至る所に隠れた名所があります。\"",
     "australia.melbourneReview1": "「長い一日でしたが、信じられないほど美しかったです。ガイドの方は面白くてとても親切でした。」",
     "australia.melbourneReview2": "「岩の造形は実物の方がさらに印象的です。強くお勧めします！」",
 
@@ -1541,6 +1582,10 @@ const translations = {
     "australia.whitsundaysH4": "最新の高速カタマラン船での移動",
     "australia.whitsundaysReview1": "「ホワイトヘブンはパラダイスです。水が青すぎて現実とは思えません！」",
     "australia.whitsundaysReview2": "「よく計画された日帰り旅行。ハミルトン島は施設が充実しています。」",
+    "australia.whitsundaysRev1Author": "ジェームス - イギリス",
+    "australia.whitsundaysRev1Text": "\"人生で最高の日の一つでした。ホワイトヘブン・ビーチは実物の方がさらに美しいです！\"",
+    "australia.whitsundaysRev2Author": "サラ - オーストラリア",
+    "australia.whitsundaysRev2Text": "\"クルーは素晴らしく、シュノーケリングは最高でした。強くお勧めします。\"",
 
     // New Zealand Destination Details
     "nz.aucklandTitle": "ワイトモ洞窟＆ホビトン・ツアー",
@@ -1586,6 +1631,34 @@ const translations = {
     "nz.rotoruaReview2": "「文化的な洞察が得られ、自然も美しいです。ユニークなニュージーランド体験です。」",
     "nz.rotoruaRev1Author": "タニ - ニュージーランド",
     "nz.rotoruaRev1Text": "「非常に感動的な文化体験でした。ハンギ料理もとても美味しかったです！」",
+
+    "nz.queenstownTitle": "クイーンズタウン・ゴンドラ＆リュージュ",
+    "nz.queenstownStars": "★★★★★",
+    "nz.queenstownReviews": "4.9 (8,200件のレビュー)",
+    "nz.queenstownLoc": "スカイライン・クイーンズタウン",
+    "nz.queenstownDesc": "絶景ゴンドラとスリリングなリュージュで、クイーンズタウン最高の景色を体験してください。ワカティプ湖とリマーカブルズ山脈の息をのむようなパノラマをお楽しみいただけます。",
+    "nz.queenstownH1": "220度のパノラマビューを楽しめる絶景ゴンドラ",
+    "nz.queenstownH2": "あらゆる年齢層が楽しめるスリリングなリュージュ",
+    "nz.queenstownH3": "ワカティプ湖とリマーカブルズ山脈の絶景",
+    "nz.queenstownH4": "ボブズ・ピークでのガイド付きスターゲージング（星空観測）",
+    "nz.queenstownRev1Author": "タニ - NZ",
+    "nz.queenstownReview1": "「国内最高の景色です！リュージュは子供たちにとって最高に楽しいです。」",
+    "nz.queenstownRev2Author": "ジェームス - USA",
+    "nz.queenstownReview2": "「クイーンズタウンでスカイラインは必見です。夕日の眺めは信じられないほど美しいです。」",
+
+    "nz.wellingtonTitle": "テ・パパ博物館＆ケーブルカー・ツアー",
+    "nz.wellingtonStars": "★★★★★",
+    "nz.wellingtonReviews": "4.8 (12,500件のレビュー)",
+    "nz.wellingtonLoc": "ニュージーランド国立博物館 テ・パパ・トンガレワ",
+    "nz.wellingtonDesc": "テ・パパ博物館でニュージーランドの豊かな歴史と文化を探索し、その後、象徴的なウェリントン・ケーブルカーに乗って市街のパノラマビューを楽しみましょう。",
+    "nz.wellingtonH1": "テ・パパ博物館でのインタラクティブな展示",
+    "nz.wellingtonH2": "象徴的なウェリントン・ケーブルカーへの乗車",
+    "nz.wellingtonH3": "ウェリントン・ハーバーのパノラマビュー",
+    "nz.wellingtonH4": "カーター天文台とボタニック・ガーデン（植物園）の訪問",
+    "nz.wellingtonRev1Author": "エマ - UK",
+    "nz.wellingtonReview1": "「テ・パパはこれまで訪れた中で最高の博物館です。非常に有益で魅力的です。」",
+    "nz.wellingtonRev2Author": "ハンス - NL",
+    "nz.wellingtonReview2": "「ケーブルカーは街を最高の視点から見せてくれます。素晴らしい午後のひとときでした。」",
 
     // Packages Section
     "packages.title": "注目のインバウンドパッケージ",

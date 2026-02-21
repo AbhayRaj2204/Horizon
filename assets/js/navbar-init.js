@@ -35,8 +35,10 @@ function initNavbar(relPath = "", isScrolled = false) {
                             <a href="#newzealand">New Zealand ▹</a>
                             <ul class="dropdown-menu-sub">
                                 <li><a href="${relPath}destinations/new-zealand/auckland.html">Auckland</a></li>
-                                <li><a href="${relPath}destinations/new-zealand/christchurch.html">Christchurch</a></li>
+                                <li><a href="${relPath}destinations/new-zealand/queenstown.html">Queenstown</a></li>
                                 <li><a href="${relPath}destinations/new-zealand/rotorua.html">Rotorua</a></li>
+                                <li><a href="${relPath}destinations/new-zealand/christchurch.html">Christchurch</a></li>
+                                <li><a href="${relPath}destinations/new-zealand/wellington.html">Wellington</a></li>
                             </ul>
                         </li>
                     </ul>
